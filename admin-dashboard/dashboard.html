@@ -1,0 +1,1188 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Rose & Stem Admin Dashboard — Manage orders, customers, inventory, blogs, and analytics." />
+  <title>Admin Dashboard — Rose &amp; Stem</title>
+  <link rel="icon" href="../global-images/favicon.svg" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet" />
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+  <!-- Global CSS -->
+  <link rel="stylesheet" href="../global-css/global.css" />
+  <!-- Dashboard CSS -->
+  <link rel="stylesheet" href="dashboard.css" />
+</head>
+<body class="dash-body">
+
+<!-- ═══════════════════════════════════════════════════════════
+     SIDEBAR
+═══════════════════════════════════════════════════════════ -->
+<aside class="sidebar" id="sidebar" role="navigation" aria-label="Admin navigation">
+
+  <!-- Logo -->
+<div class="sidebar-logo">
+<a href="../home-1/home.html" class="navbar-logo">
+
+  <img src="../global-images/logo-pink.svg"
+       class="logo-light"
+       alt="Rose & Stem">
+
+  <img src="../global-images/logo-white.svg"
+       class="logo-dark"
+       alt="Rose & Stem">
+
+</a>
+</div>
+
+  <!-- Admin Profile -->
+  <div class="sidebar-profile">
+    <img src="https://i.pravatar.cc/80?img=60" alt="Admin profile photo" class="sidebar-avatar" />
+    <div class="sidebar-profile-info">
+      <span class="sidebar-admin-name">Aanya Sharma</span>
+      <span class="sidebar-admin-role">Super Admin</span>
+    </div>
+  </div>
+
+  <!-- Nav Sections -->
+  <nav class="sidebar-nav" aria-label="Dashboard sections">
+
+    <!-- MAIN -->
+    <div class="nav-section-label">Main</div>
+    <ul class="nav-list">
+      <li>
+        <button class="nav-item active" data-panel="overview" aria-current="page">
+          <i data-lucide="layout-dashboard"></i>
+          <span>Overview</span>
+          <span class="nav-badge nav-badge-rose">Live</span>
+        </button>
+      </li>
+      <li>
+        <button class="nav-item" data-panel="analytics">
+          <i data-lucide="bar-chart-3"></i>
+          <span>Analytics</span>
+        </button>
+      </li>
+    </ul>
+
+    <!-- ORDERS -->
+    <div class="nav-section-label">Orders & Delivery</div>
+    <ul class="nav-list">
+      <li>
+        <button class="nav-item" data-panel="orders">
+          <i data-lucide="shopping-bag"></i>
+          <span>Orders</span>
+          <span class="nav-badge nav-badge-rose">14</span>
+        </button>
+      </li>
+      <li>
+        <button class="nav-item" data-panel="delivery">
+          <i data-lucide="truck"></i>
+          <span>Delivery Tracking</span>
+          <span class="nav-badge nav-badge-green">8</span>
+        </button>
+      </li>
+      <li>
+        <button class="nav-item" data-panel="subscriptions">
+          <i data-lucide="refresh-ccw"></i>
+          <span>Subscriptions</span>
+        </button>
+      </li>
+    </ul>
+
+    <!-- CATALOGUE -->
+    <div class="nav-section-label">Catalogue</div>
+    <ul class="nav-list">
+      <li>
+        <button class="nav-item" data-panel="products">
+          <i data-lucide="flower-2"></i>
+          <span>Products</span>
+        </button>
+      </li>
+      <li>
+        <button class="nav-item" data-panel="inventory">
+          <i data-lucide="package"></i>
+          <span>Inventory</span>
+          <span class="nav-badge nav-badge-gold">3 Low</span>
+        </button>
+      </li>
+      <li>
+        <button class="nav-item" data-panel="occasions">
+          <i data-lucide="calendar-heart"></i>
+          <span>Occasions</span>
+        </button>
+      </li>
+    </ul>
+
+    <!-- PEOPLE -->
+    <div class="nav-section-label">People</div>
+    <ul class="nav-list">
+      <li>
+        <button class="nav-item" data-panel="customers">
+          <i data-lucide="users"></i>
+          <span>Customers</span>
+        </button>
+      </li>
+      <li>
+        <button class="nav-item" data-panel="reviews">
+          <i data-lucide="star"></i>
+          <span>Reviews</span>
+          <span class="nav-badge nav-badge-rose">5 New</span>
+        </button>
+      </li>
+      <li>
+        <button class="nav-item" data-panel="messages">
+          <i data-lucide="message-square"></i>
+          <span>Messages</span>
+          <span class="nav-badge nav-badge-rose">3</span>
+        </button>
+      </li>
+    </ul>
+
+    <!-- CONTENT -->
+    <div class="nav-section-label">Content</div>
+    <ul class="nav-list">
+      <li>
+        <button class="nav-item" data-panel="blog">
+          <i data-lucide="file-text"></i>
+          <span>Blog CMS</span>
+        </button>
+      </li>
+      <li>
+        <button class="nav-item" data-panel="promotions">
+          <i data-lucide="tag"></i>
+          <span>Promotions</span>
+        </button>
+      </li>
+    </ul>
+
+    <!-- SYSTEM -->
+    <div class="nav-section-label">System</div>
+    <ul class="nav-list">
+      <li>
+        <button class="nav-item" data-panel="reports">
+          <i data-lucide="file-bar-chart-2"></i>
+          <span>Reports</span>
+        </button>
+      </li>
+      <li>
+        <button class="nav-item" data-panel="settings">
+          <i data-lucide="settings-2"></i>
+          <span>Settings</span>
+        </button>
+      </li>
+    </ul>
+
+  </nav>
+
+  <!-- Sidebar Footer -->
+  <div class="sidebar-footer">
+    <a href="../home-1/home.html" class="sidebar-footer-link">
+      <i data-lucide="external-link"></i>
+      <span>View Website</span>
+    </a>
+
+  </div>
+
+</aside>
+
+<!-- ═══════════════════════════════════════════════════════════
+     MAIN WRAPPER
+═══════════════════════════════════════════════════════════ -->
+<div class="dash-main" id="dashMain">
+
+  <!-- ── TOP BAR ─────────────────────────────────────────── -->
+  <header class="topbar" role="banner">
+    <div class="topbar-left">
+      <!-- Mobile menu toggle -->
+      <button class="topbar-menu-btn" id="mobileMenuBtn" aria-label="Open sidebar" aria-expanded="false">
+        <i data-lucide="menu"></i>
+      </button>
+      <!-- Breadcrumb / page title -->
+      <div class="topbar-title">
+        <span class="topbar-title-text" id="topbarTitle">Overview</span>
+        <span class="topbar-title-date" id="topbarDate"></span>
+      </div>
+    </div>
+
+    <div class="topbar-right">
+      <!-- Search -->
+      <div class="topbar-search">
+        <i data-lucide="search" aria-hidden="true"></i>
+        <input type="search" placeholder="Search orders, customers…" aria-label="Search dashboard" id="dashSearch" />
+      </div>
+
+      <!-- Theme Toggle -->
+      <button class="topbar-icon-btn theme-toggle" aria-label="Toggle theme" title="Toggle theme">
+        <i data-lucide="moon" class="icon-moon"></i>
+        <i data-lucide="sun" class="icon-sun" style="display:none"></i>
+      </button>
+
+      <!-- Notifications -->
+      <div class="notif-wrapper" id="notifWrapper">
+        <button class="topbar-icon-btn notif-btn" id="notifBtn" aria-label="Notifications" aria-expanded="false" aria-haspopup="true">
+          <i data-lucide="bell"></i>
+          <span class="notif-dot" id="notifDot" aria-hidden="true"></span>
+        </button>
+
+        <!-- Notification Panel -->
+        <div class="notif-panel" id="notifPanel" role="dialog" aria-label="Notifications" aria-modal="false">
+          <div class="notif-header">
+            <h2 class="notif-heading">Notifications</h2>
+            <div class="notif-header-actions">
+              <button class="notif-mark-all" id="markAllRead">Mark all read</button>
+              <button class="notif-close" id="notifClose" aria-label="Close notifications">
+                <i data-lucide="x"></i>
+              </button>
+            </div>
+          </div>
+          <div class="notif-tabs">
+            <button class="notif-tab active" data-notif-tab="all">All</button>
+            <button class="notif-tab" data-notif-tab="orders">Orders</button>
+            <button class="notif-tab" data-notif-tab="system">System</button>
+          </div>
+          <ul class="notif-list" id="notifList" role="list" aria-label="Notification items">
+            <!-- Injected by JS -->
+          </ul>
+          <div class="notif-footer">
+            <button class="notif-view-all" onclick="switchPanel('messages')">View all messages →</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Profile -->
+      <div class="topbar-profile-wrap" id="topbarProfileWrap">
+        <button class="topbar-profile" id="topbarProfileBtn" aria-label="Admin profile menu" aria-haspopup="true">
+          <img src="https://i.pravatar.cc/80?img=60" alt="Admin" class="topbar-avatar" width="36" height="36" />
+          <span class="topbar-profile-name">Aanya</span>
+          <i data-lucide="chevron-down" class="topbar-chevron"></i>
+        </button>
+        <div class="profile-dropdown" id="profileDropdown">
+          <div class="profile-dd-header">
+            <img src="https://i.pravatar.cc/80?img=60" alt="Admin" width="44" height="44" />
+            <div>
+              <strong>Aanya Sharma</strong>
+              <span>hr@roseanstem.com</span>
+            </div>
+          </div>
+          <div class="profile-dd-links">
+            <button onclick="switchPanel('settings')"><i data-lucide="user-cog"></i> Profile Settings</button>
+            <button onclick="switchPanel('settings')"><i data-lucide="shield"></i> Security</button>
+            <hr style="border-color:var(--border-color);margin:6px 0;" />
+            <button class="profile-dd-logout" id="profileLogout"><i data-lucide="log-out"></i> Sign Out</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ── PANELS CONTAINER ────────────────────────────────── -->
+  <div class="panels-container" id="panelsContainer">
+
+    <!-- ════════════════════ OVERVIEW ════════════════════ -->
+    <section class="panel active" id="panel-overview" aria-label="Overview panel">
+      <div class="panel-inner">
+
+        <!-- Welcome -->
+        <div class="welcome-bar">
+          <div>
+            <h1 class="welcome-heading">Good morning, Aanya 🌹</h1>
+            <p class="welcome-sub">Here's what's happening with Rose & Stem today.</p>
+          </div>
+          <a href="../contact/contact.html" class="btn btn-primary btn-sm">
+            <i data-lucide="plus" style="width:16px;height:16px;"></i> New Order
+          </a>
+        </div>
+
+        <!-- KPI Cards -->
+        <div class="kpi-grid">
+          <div class="kpi-card kpi-rose">
+            <div class="kpi-icon"><i data-lucide="indian-rupee"></i></div>
+            <div class="kpi-body">
+              <span class="kpi-label">Revenue Today</span>
+              <span class="kpi-value counter" data-target="48320" data-prefix="₹" data-suffix="">0</span>
+              <span class="kpi-delta kpi-up"><i data-lucide="trending-up"></i> +18.4% vs yesterday</span>
+            </div>
+          </div>
+          <div class="kpi-card kpi-green">
+            <div class="kpi-icon"><i data-lucide="shopping-bag"></i></div>
+            <div class="kpi-body">
+              <span class="kpi-label">Orders Today</span>
+              <span class="kpi-value counter" data-target="137" data-suffix="">0</span>
+              <span class="kpi-delta kpi-up"><i data-lucide="trending-up"></i> +23 vs yesterday</span>
+            </div>
+          </div>
+          <div class="kpi-card kpi-gold">
+            <div class="kpi-icon"><i data-lucide="users"></i></div>
+            <div class="kpi-body">
+              <span class="kpi-label">New Customers</span>
+              <span class="kpi-value counter" data-target="29" data-suffix="">0</span>
+              <span class="kpi-delta kpi-up"><i data-lucide="trending-up"></i> +7 this week</span>
+            </div>
+          </div>
+          <div class="kpi-card kpi-plum">
+            <div class="kpi-icon"><i data-lucide="refresh-ccw"></i></div>
+            <div class="kpi-body">
+              <span class="kpi-label">Active Subscriptions</span>
+              <span class="kpi-value counter" data-target="1842" data-suffix="">0</span>
+              <span class="kpi-delta kpi-up"><i data-lucide="trending-up"></i> +12 this month</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Charts Row -->
+        <div class="charts-row">
+          <!-- Revenue Chart -->
+          <div class="chart-card chart-card-large">
+            <div class="chart-card-header">
+              <h3 class="chart-title">Revenue Overview</h3>
+              <div class="chart-filters">
+                <button class="chart-filter-btn active" data-period="7d">7D</button>
+                <button class="chart-filter-btn" data-period="30d">30D</button>
+                <button class="chart-filter-btn" data-period="90d">90D</button>
+              </div>
+            </div>
+            <div class="chart-area" aria-label="Revenue bar chart">
+              <canvas id="revenueChart"></canvas>
+            </div>
+          </div>
+
+          <!-- Donut - Top Bouquets -->
+          <div class="chart-card chart-card-small">
+            <div class="chart-card-header">
+              <h3 class="chart-title">Top Bouquets</h3>
+            </div>
+            <div class="donut-wrap" aria-label="Top bouquets donut chart">
+              <canvas id="bouquetChart"></canvas>
+            </div>
+            <ul class="donut-legend" aria-label="Legend">
+              <li><span class="legend-dot" style="background:#C84C6A"></span>Red Roses <strong>38%</strong></li>
+              <li><span class="legend-dot" style="background:#EFA3B1"></span>Blush Pink <strong>24%</strong></li>
+              <li><span class="legend-dot" style="background:#5E8B7E"></span>Luxury Box <strong>21%</strong></li>
+              <li><span class="legend-dot" style="background:#E6C07B"></span>Mixed Seasonal <strong>17%</strong></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Recent Orders + Quick Stats -->
+        <div class="bottom-row">
+          <!-- Recent Orders Table -->
+          <div class="table-card">
+            <div class="table-card-header">
+              <h3 class="chart-title">Recent Orders</h3>
+              <button class="btn-link" onclick="switchPanel('orders')">View all →</button>
+            </div>
+            <div class="table-scroll">
+              <table class="dash-table" aria-label="Recent orders">
+                <thead>
+                  <tr>
+                    <th>Order ID</th>
+                    <th>Customer</th>
+                    <th>Bouquet</th>
+                    <th>Amount</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>#RS-4821</td><td>Priya M.</td><td>Red Rose Bouquet</td><td>₹1,299</td><td><span class="status-badge status-delivered">Delivered</span></td></tr>
+                  <tr><td>#RS-4820</td><td>Rahul K.</td><td>Luxury Rose Box</td><td>₹2,499</td><td><span class="status-badge status-transit">In Transit</span></td></tr>
+                  <tr><td>#RS-4819</td><td>Sneha R.</td><td>Blush Arrangement</td><td>₹899</td><td><span class="status-badge status-processing">Processing</span></td></tr>
+                  <tr><td>#RS-4818</td><td>Arjun P.</td><td>Mixed Seasonal</td><td>₹749</td><td><span class="status-badge status-delivered">Delivered</span></td></tr>
+                  <tr><td>#RS-4817</td><td>Meera S.</td><td>Birthday Surprise</td><td>₹1,599</td><td><span class="status-badge status-pending">Pending</span></td></tr>
+                  <tr><td>#RS-4816</td><td>Vikram T.</td><td>Anniversary Luxury</td><td>₹3,499</td><td><span class="status-badge status-transit">In Transit</span></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Quick Stats Column -->
+          <div class="quick-stats-col">
+            <!-- Delivery Stats -->
+            <div class="stat-mini-card">
+              <h4 class="stat-mini-title"><i data-lucide="truck"></i> Delivery Stats</h4>
+              <div class="stat-progress-list">
+                <div class="stat-progress-item">
+                  <span>Delivered</span>
+                  <div class="progress-bar-wrap"><div class="progress-bar" style="width:72%;background:var(--color-secondary)"></div></div>
+                  <strong>72%</strong>
+                </div>
+                <div class="stat-progress-item">
+                  <span>In Transit</span>
+                  <div class="progress-bar-wrap"><div class="progress-bar" style="width:18%;background:var(--color-primary)"></div></div>
+                  <strong>18%</strong>
+                </div>
+                <div class="stat-progress-item">
+                  <span>Processing</span>
+                  <div class="progress-bar-wrap"><div class="progress-bar" style="width:7%;background:var(--color-gold)"></div></div>
+                  <strong>7%</strong>
+                </div>
+                <div class="stat-progress-item">
+                  <span>Pending</span>
+                  <div class="progress-bar-wrap"><div class="progress-bar" style="width:3%;background:#e63946"></div></div>
+                  <strong>3%</strong>
+                </div>
+              </div>
+            </div>
+
+            <!-- Top Cities -->
+            <div class="stat-mini-card">
+              <h4 class="stat-mini-title"><i data-lucide="map-pin"></i> Top Delivery Cities</h4>
+              <ul class="city-list">
+                <li><span>Mumbai</span><span class="city-count">892 orders</span></li>
+                <li><span>Delhi</span><span class="city-count">741 orders</span></li>
+                <li><span>Bengaluru</span><span class="city-count">613 orders</span></li>
+                <li><span>Pune</span><span class="city-count">389 orders</span></li>
+                <li><span>Chennai</span><span class="city-count">274 orders</span></li>
+              </ul>
+            </div>
+
+            <!-- Low Stock Alert -->
+            <div class="stat-mini-card stat-mini-alert">
+              <h4 class="stat-mini-title"><i data-lucide="alert-triangle"></i> Low Stock Alert</h4>
+              <ul class="alert-list">
+                <li><i data-lucide="flower-2"></i> Red Roses — <strong>12 left</strong></li>
+                <li><i data-lucide="package"></i> Luxury Boxes — <strong>8 left</strong></li>
+                <li><i data-lucide="gift"></i> Candle Sets — <strong>5 left</strong></li>
+              </ul>
+              <button class="btn btn-sm btn-secondary" style="margin-top:10px;width:100%;" onclick="switchPanel('inventory')">Manage Inventory</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ════════════════════ ANALYTICS ════════════════════ -->
+    <section class="panel" id="panel-analytics" aria-label="Analytics panel">
+      <div class="panel-inner">
+        <div class="panel-header">
+          <h2>Analytics</h2>
+          <p>Detailed performance metrics for Rose & Stem</p>
+        </div>
+
+        <!-- Summary KPIs -->
+        <div class="kpi-grid">
+          <div class="kpi-card kpi-rose">
+            <div class="kpi-icon"><i data-lucide="indian-rupee"></i></div>
+            <div class="kpi-body">
+              <span class="kpi-label">Monthly Revenue</span>
+              <span class="kpi-value">₹12,84,320</span>
+              <span class="kpi-delta kpi-up"><i data-lucide="trending-up"></i> +22.1% MoM</span>
+            </div>
+          </div>
+          <div class="kpi-card kpi-green">
+            <div class="kpi-icon"><i data-lucide="package-check"></i></div>
+            <div class="kpi-body">
+              <span class="kpi-label">Orders This Month</span>
+              <span class="kpi-value">3,847</span>
+              <span class="kpi-delta kpi-up"><i data-lucide="trending-up"></i> +14.7%</span>
+            </div>
+          </div>
+          <div class="kpi-card kpi-gold">
+            <div class="kpi-icon"><i data-lucide="repeat-2"></i></div>
+            <div class="kpi-body">
+              <span class="kpi-label">Repeat Order Rate</span>
+              <span class="kpi-value">64.3%</span>
+              <span class="kpi-delta kpi-up"><i data-lucide="trending-up"></i> +5.2%</span>
+            </div>
+          </div>
+          <div class="kpi-card kpi-plum">
+            <div class="kpi-icon"><i data-lucide="star"></i></div>
+            <div class="kpi-body">
+              <span class="kpi-label">Avg. Rating</span>
+              <span class="kpi-value">4.87 ★</span>
+              <span class="kpi-delta kpi-up"><i data-lucide="trending-up"></i> Excellent</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Revenue + Conversion charts -->
+        <!-- <div class="charts-row">
+          <div class="chart-card chart-card-large">
+            <div class="chart-card-header">
+              <h3 class="chart-title">Monthly Revenue Trend (2025)</h3>
+            </div>
+            <div class="chart-area">
+              <canvas id="monthlyChart"></canvas>
+            </div>
+          </div>
+          <div class="chart-card chart-card-small">
+            <div class="chart-card-header">
+              <h3 class="chart-title">Traffic Sources</h3>
+            </div>
+            <div class="donut-wrap">
+              <canvas id="trafficChart"></canvas>
+            </div>
+            <ul class="donut-legend">
+              <li><span class="legend-dot" style="background:#C84C6A"></span>Direct <strong>42%</strong></li>
+              <li><span class="legend-dot" style="background:#5E8B7E"></span>Organic <strong>29%</strong></li>
+              <li><span class="legend-dot" style="background:#E6C07B"></span>Social <strong>18%</strong></li>
+              <li><span class="legend-dot" style="background:#8C5C74"></span>Referral <strong>11%</strong></li>
+            </ul>
+          </div>
+        </div> -->
+
+        <!-- Occasion breakdown table -->
+        <div class="table-card" style="margin-top:var(--space-4)">
+          <div class="table-card-header">
+            <h3 class="chart-title">Revenue by Occasion</h3>
+          </div>
+          <div class="table-scroll">
+            <table class="dash-table">
+              <thead><tr><th>Occasion</th><th>Orders</th><th>Revenue</th><th>Avg. Value</th><th>Growth</th></tr></thead>
+              <tbody>
+                <tr><td>🌹 Anniversary</td><td>1,204</td><td>₹3,84,320</td><td>₹3,191</td><td><span class="kpi-delta kpi-up" style="display:inline-flex">+28%</span></td></tr>
+                <tr><td>🎂 Birthday</td><td>987</td><td>₹2,12,140</td><td>₹2,149</td><td><span class="kpi-delta kpi-up" style="display:inline-flex">+19%</span></td></tr>
+                <tr><td>💒 Wedding</td><td>342</td><td>₹1,94,680</td><td>₹5,692</td><td><span class="kpi-delta kpi-up" style="display:inline-flex">+34%</span></td></tr>
+                <tr><td>💌 Apology</td><td>489</td><td>₹98,720</td><td>₹2,019</td><td><span class="kpi-delta kpi-down" style="display:inline-flex">-3%</span></td></tr>
+                <tr><td>🎉 Celebration</td><td>825</td><td>₹1,94,460</td><td>₹2,357</td><td><span class="kpi-delta kpi-up" style="display:inline-flex">+11%</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ════════════════════ ORDERS ════════════════════ -->
+    <section class="panel" id="panel-orders" aria-label="Orders panel">
+      <div class="panel-inner">
+        <div class="panel-header">
+          <h2>Orders</h2>
+          <p>Manage and track all customer orders</p>
+        </div>
+
+        <!-- Filter Row -->
+        <div class="filter-row">
+          <div class="filter-search">
+            <i data-lucide="search"></i>
+            <input type="search" placeholder="Search order ID or customer…" aria-label="Search orders" />
+          </div>
+          <select class="filter-select" aria-label="Filter by status">
+            <option value="">All Status</option>
+            <option>Pending</option>
+            <option>Processing</option>
+            <option>In Transit</option>
+            <option>Delivered</option>
+          </select>
+          <select class="filter-select" aria-label="Filter by date">
+            <option>Last 7 days</option>
+            <option>Last 30 days</option>
+            <option>This month</option>
+          </select>
+          <button class="btn btn-primary btn-sm">Export CSV</button>
+        </div>
+
+        <!-- Orders Table -->
+        <div class="table-card">
+          <div class="table-scroll">
+            <table class="dash-table" aria-label="All orders">
+              <thead>
+                <tr>
+                  <th><input type="checkbox" aria-label="Select all orders" /></th>
+                  <th>Order ID</th><th>Customer</th><th>Product</th>
+                  <th>Date</th><th>Amount</th><th>Status</th><th>Action</th>
+                </tr>
+              </thead>
+              <tbody id="ordersTableBody">
+                <!-- Rows generated by JS -->
+              </tbody>
+            </table>
+          </div>
+          <div class="table-pagination">
+            <span class="pagination-info">Showing 1–10 of 247 orders</span>
+            <div class="pagination-btns">
+              <button class="page-btn" disabled>←</button>
+              <button class="page-btn active">1</button>
+              <button class="page-btn">2</button>
+              <button class="page-btn">3</button>
+              <span>…</span>
+              <button class="page-btn">25</button>
+              <button class="page-btn">→</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════ DELIVERY ════════════════════ -->
+    <section class="panel" id="panel-delivery" aria-label="Delivery tracking panel">
+      <div class="panel-inner">
+        <div class="panel-header">
+          <h2>Delivery Tracking</h2>
+          <p>Live delivery status across all active orders</p>
+        </div>
+
+        <div class="kpi-grid">
+          <div class="kpi-card kpi-green"><div class="kpi-icon"><i data-lucide="check-circle-2"></i></div><div class="kpi-body"><span class="kpi-label">Delivered Today</span><span class="kpi-value">98</span><span class="kpi-delta kpi-up">On time: 94%</span></div></div>
+          <div class="kpi-card kpi-rose"><div class="kpi-icon"><i data-lucide="truck"></i></div><div class="kpi-body"><span class="kpi-label">In Transit</span><span class="kpi-value">24</span><span class="kpi-delta">Active routes</span></div></div>
+          <div class="kpi-card kpi-gold"><div class="kpi-icon"><i data-lucide="clock"></i></div><div class="kpi-body"><span class="kpi-label">Avg Delivery Time</span><span class="kpi-value">3.2 hrs</span><span class="kpi-delta kpi-up">↓ 18 min faster</span></div></div>
+          <div class="kpi-card kpi-plum"><div class="kpi-icon"><i data-lucide="x-circle"></i></div><div class="kpi-body"><span class="kpi-label">Failed Attempts</span><span class="kpi-value">4</span><span class="kpi-delta kpi-down">Needs attention</span></div></div>
+        </div>
+
+        <div class="table-card" style="margin-top:var(--space-4)">
+          <div class="table-card-header"><h3 class="chart-title">Active Deliveries</h3></div>
+          <div class="table-scroll">
+            <table class="dash-table">
+              <thead><tr><th>Order ID</th><th>Customer</th><th>Address</th><th>Rider</th><th>ETA</th><th>Status</th></tr></thead>
+              <tbody>
+                <tr><td>#RS-4820</td><td>Rahul K.</td><td>Andheri West, Mumbai</td><td>Ravi D.</td><td>2:30 PM</td><td><span class="status-badge status-transit">In Transit</span></td></tr>
+                <tr><td>#RS-4815</td><td>Kavya N.</td><td>Koramangala, Bengaluru</td><td>Suresh P.</td><td>3:00 PM</td><td><span class="status-badge status-transit">In Transit</span></td></tr>
+                <tr><td>#RS-4810</td><td>Ananya L.</td><td>Connaught Place, Delhi</td><td>Mohan R.</td><td>3:15 PM</td><td><span class="status-badge status-transit">In Transit</span></td></tr>
+                <tr><td>#RS-4808</td><td>Siddharth V.</td><td>Baner, Pune</td><td>Ajay K.</td><td>4:00 PM</td><td><span class="status-badge status-processing">Out for Delivery</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════ SUBSCRIPTIONS ════════════════ -->
+    <section class="panel" id="panel-subscriptions" aria-label="Subscriptions panel">
+      <div class="panel-inner">
+        <div class="panel-header"><h2>Subscriptions</h2><p>Manage recurring flower delivery plans</p></div>
+        <div class="kpi-grid">
+          <div class="kpi-card kpi-rose"><div class="kpi-icon"><i data-lucide="repeat-2"></i></div><div class="kpi-body"><span class="kpi-label">Active Plans</span><span class="kpi-value">1,842</span><span class="kpi-delta kpi-up">+12 this month</span></div></div>
+          <div class="kpi-card kpi-green"><div class="kpi-icon"><i data-lucide="flower"></i></div><div class="kpi-body"><span class="kpi-label">Bloom Plan</span><span class="kpi-value">946</span><span class="kpi-delta kpi-up">Most popular</span></div></div>
+          <div class="kpi-card kpi-gold"><div class="kpi-icon"><i data-lucide="crown"></i></div><div class="kpi-body"><span class="kpi-label">Petal & Gold</span><span class="kpi-value">412</span><span class="kpi-delta kpi-up">Highest value</span></div></div>
+          <div class="kpi-card kpi-plum"><div class="kpi-icon"><i data-lucide="pause-circle"></i></div><div class="kpi-body"><span class="kpi-label">Paused</span><span class="kpi-value">89</span><span class="kpi-delta">7 this week</span></div></div>
+        </div>
+        <div class="table-card" style="margin-top:var(--space-4)">
+          <div class="table-card-header"><h3 class="chart-title">Recent Subscriptions</h3></div>
+          <div class="table-scroll">
+            <table class="dash-table">
+              <thead><tr><th>Subscriber</th><th>Plan</th><th>Start Date</th><th>Next Billing</th><th>Amount</th><th>Status</th></tr></thead>
+              <tbody>
+                <tr><td>Priya Mehta</td><td><span class="badge badge-rose">Bloom</span></td><td>Mar 1, 2025</td><td>Apr 1, 2025</td><td>₹1,799</td><td><span class="status-badge status-delivered">Active</span></td></tr>
+                <tr><td>Arjun Kapoor</td><td><span class="badge badge-gold">Petal & Gold</span></td><td>Feb 14, 2025</td><td>Apr 14, 2025</td><td>₹3,499</td><td><span class="status-badge status-delivered">Active</span></td></tr>
+                <tr><td>Sneha Rao</td><td><span class="badge badge-primary">Blossom</span></td><td>Mar 10, 2025</td><td>Apr 10, 2025</td><td>₹799</td><td><span class="status-badge status-pending">Paused</span></td></tr>
+                <tr><td>Vikram T.</td><td><span class="badge badge-rose">Bloom</span></td><td>Jan 20, 2025</td><td>Apr 20, 2025</td><td>₹1,799</td><td><span class="status-badge status-delivered">Active</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════ PRODUCTS ════════════════════ -->
+    <section class="panel" id="panel-products" aria-label="Products panel">
+      <div class="panel-inner">
+        <div class="panel-header">
+          <h2>Products</h2>
+          <p>Manage your floral catalogue</p>
+        </div>
+        <div class="filter-row">
+          <div class="filter-search"><i data-lucide="search"></i><input type="search" placeholder="Search products…" /></div>
+          <select class="filter-select"><option>All Categories</option><option>Roses</option><option>Mixed</option><option>Luxury</option></select>
+          <button class="btn btn-primary btn-sm"><i data-lucide="plus" style="width:14px;height:14px;"></i> Add Product</button>
+        </div>
+        <div class="products-grid">
+          <!-- Product Card -->
+          <div class="product-admin-card">
+            <img src="../home-1/h1b1.jpg" alt="Classic Red Rose Bouquet" loading="lazy" />
+            <div class="product-admin-body">
+              <span class="blog-category">Roses</span>
+              <h4>Classic Red Rose Bouquet</h4>
+              <div class="product-admin-footer">
+                <span class="product-admin-price">₹1,299</span>
+                <div class="product-admin-actions">
+                  <button aria-label="Edit product"><i data-lucide="pencil"></i></button>
+                  <button aria-label="Delete product" style="color:#e63946"><i data-lucide="trash-2"></i></button>
+                </div>
+              </div>
+              <span class="status-badge status-delivered" style="margin-top:6px;">In Stock · 84 left</span>
+            </div>
+          </div>
+          <div class="product-admin-card">
+            <img src="../home-1/h1b2.jpg" alt="Blush Pink Arrangement" loading="lazy" />
+            <div class="product-admin-body">
+              <span class="blog-category">Mixed</span>
+              <h4>Blush Pink Arrangement</h4>
+              <div class="product-admin-footer">
+                <span class="product-admin-price">₹899</span>
+                <div class="product-admin-actions">
+                  <button aria-label="Edit"><i data-lucide="pencil"></i></button>
+                  <button aria-label="Delete" style="color:#e63946"><i data-lucide="trash-2"></i></button>
+                </div>
+              </div>
+              <span class="status-badge status-delivered" style="margin-top:6px;">In Stock · 47 left</span>
+            </div>
+          </div>
+          <div class="product-admin-card">
+            <img src="../home-1/h1b3.jpg" alt="Luxury Rose Box" loading="lazy" />
+            <div class="product-admin-body">
+              <span class="blog-category">Luxury</span>
+              <h4>Luxury Rose Box</h4>
+              <div class="product-admin-footer">
+                <span class="product-admin-price">₹2,499</span>
+                <div class="product-admin-actions">
+                  <button aria-label="Edit"><i data-lucide="pencil"></i></button>
+                  <button aria-label="Delete" style="color:#e63946"><i data-lucide="trash-2"></i></button>
+                </div>
+              </div>
+              <span class="status-badge status-pending" style="margin-top:6px;">Low Stock · 8 left</span>
+            </div>
+          </div>
+          <div class="product-admin-card">
+            <img src="../home-1/h1b4.jpg" alt="Mixed Seasonal Bouquet" loading="lazy" />
+            <div class="product-admin-body">
+              <span class="blog-category">Mixed</span>
+              <h4>Mixed Seasonal Bouquet</h4>
+              <div class="product-admin-footer">
+                <span class="product-admin-price">₹749</span>
+                <div class="product-admin-actions">
+                  <button aria-label="Edit"><i data-lucide="pencil"></i></button>
+                  <button aria-label="Delete" style="color:#e63946"><i data-lucide="trash-2"></i></button>
+                </div>
+              </div>
+              <span class="status-badge status-delivered" style="margin-top:6px;">In Stock · 63 left</span>
+            </div>
+          </div>
+          <div class="product-admin-card">
+            <img src="../home-1/h1b5.jpg" alt="Anniversary Luxury Bundle" loading="lazy" />
+            <div class="product-admin-body">
+              <span class="blog-category">Luxury</span>
+              <h4>Anniversary Luxury Bundle</h4>
+              <div class="product-admin-footer">
+                <span class="product-admin-price">₹3,499</span>
+                <div class="product-admin-actions">
+                  <button aria-label="Edit"><i data-lucide="pencil"></i></button>
+                  <button aria-label="Delete" style="color:#e63946"><i data-lucide="trash-2"></i></button>
+                </div>
+              </div>
+              <span class="status-badge status-delivered" style="margin-top:6px;">In Stock · 22 left</span>
+            </div>
+          </div>
+          <div class="product-admin-card product-add-card" role="button" tabindex="0" aria-label="Add new product">
+            <i data-lucide="plus-circle"></i>
+            <span>Add New Product</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════ INVENTORY ════════════════════ -->
+    <section class="panel" id="panel-inventory" aria-label="Inventory panel">
+      <div class="panel-inner">
+        <div class="panel-header"><h2>Inventory</h2><p>Track stock levels and reorder alerts</p></div>
+        <div class="table-card">
+          <div class="table-scroll">
+            <table class="dash-table">
+              <thead><tr><th>Item</th><th>SKU</th><th>Category</th><th>In Stock</th><th>Reorder At</th><th>Status</th><th>Action</th></tr></thead>
+              <tbody>
+                <tr><td>Red Roses (stems)</td><td>RS-001</td><td>Flowers</td><td>12</td><td>50</td><td><span class="status-badge status-pending">Low Stock</span></td><td><button class="btn btn-sm btn-secondary">Reorder</button></td></tr>
+                <tr><td>Blush Pink Roses</td><td>RS-002</td><td>Flowers</td><td>47</td><td>30</td><td><span class="status-badge status-delivered">OK</span></td><td><button class="btn btn-sm btn-secondary">Edit</button></td></tr>
+                <tr><td>Luxury Gift Boxes</td><td>PKG-001</td><td>Packaging</td><td>8</td><td>25</td><td><span class="status-badge status-pending">Low Stock</span></td><td><button class="btn btn-sm btn-secondary">Reorder</button></td></tr>
+                <tr><td>Scented Candle Sets</td><td>ADD-003</td><td>Add-ons</td><td>5</td><td>20</td><td><span class="status-badge status-pending">Critical</span></td><td><button class="btn btn-sm btn-secondary">Reorder</button></td></tr>
+                <tr><td>Greeting Cards</td><td>ADD-001</td><td>Add-ons</td><td>218</td><td>50</td><td><span class="status-badge status-delivered">OK</span></td><td><button class="btn btn-sm btn-secondary">Edit</button></td></tr>
+                <tr><td>Ribbon & Wrapping</td><td>PKG-002</td><td>Packaging</td><td>340</td><td>100</td><td><span class="status-badge status-delivered">OK</span></td><td><button class="btn btn-sm btn-secondary">Edit</button></td></tr>
+                <tr><td>Teddy Bears</td><td>ADD-002</td><td>Add-ons</td><td>63</td><td>20</td><td><span class="status-badge status-delivered">OK</span></td><td><button class="btn btn-sm btn-secondary">Edit</button></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════ OCCASIONS ════════════════════ -->
+    <section class="panel" id="panel-occasions" aria-label="Occasions panel">
+      <div class="panel-inner">
+        <div class="panel-header"><h2>Occasions &amp; Reminders</h2><p>Upcoming customer occasion dates requiring delivery</p></div>
+        <div class="kpi-grid">
+          <div class="kpi-card kpi-rose"><div class="kpi-icon"><i data-lucide="calendar-heart"></i></div><div class="kpi-body"><span class="kpi-label">Occasions This Week</span><span class="kpi-value">48</span><span class="kpi-delta kpi-up">14 deliveries scheduled</span></div></div>
+          <div class="kpi-card kpi-green"><div class="kpi-icon"><i data-lucide="bell"></i></div><div class="kpi-body"><span class="kpi-label">Reminders Sent</span><span class="kpi-value">312</span><span class="kpi-delta kpi-up">This month</span></div></div>
+          <div class="kpi-card kpi-gold"><div class="kpi-icon"><i data-lucide="heart"></i></div><div class="kpi-body"><span class="kpi-label">Anniversaries</span><span class="kpi-value">19</span><span class="kpi-delta">This week</span></div></div>
+          <div class="kpi-card kpi-plum"><div class="kpi-icon"><i data-lucide="cake"></i></div><div class="kpi-body"><span class="kpi-label">Birthdays</span><span class="kpi-value">29</span><span class="kpi-delta">This week</span></div></div>
+        </div>
+        <div class="table-card" style="margin-top:var(--space-4)">
+          <div class="table-card-header"><h3 class="chart-title">Upcoming Occasions (Next 7 Days)</h3></div>
+          <div class="table-scroll">
+            <table class="dash-table">
+              <thead><tr><th>Customer</th><th>Occasion</th><th>Date</th><th>Saved Bouquet</th><th>Reminder Sent</th><th>Status</th></tr></thead>
+              <tbody>
+                <tr><td>Priya Mehta</td><td>💍 Anniversary</td><td>Apr 4, 2025</td><td>Luxury Rose Box</td><td><span class="status-badge status-delivered">Yes</span></td><td><span class="status-badge status-processing">Scheduled</span></td></tr>
+                <tr><td>Rohan Verma</td><td>🎂 Birthday</td><td>Apr 5, 2025</td><td>Birthday Surprise</td><td><span class="status-badge status-delivered">Yes</span></td><td><span class="status-badge status-processing">Scheduled</span></td></tr>
+                <tr><td>Anita Bose</td><td>💒 Wedding</td><td>Apr 6, 2025</td><td>Custom Arrangement</td><td><span class="status-badge status-pending">No</span></td><td><button class="btn btn-sm btn-primary">Send Reminder</button></td></tr>
+                <tr><td>Suresh Iyer</td><td>💍 Anniversary</td><td>Apr 8, 2025</td><td>Red Rose Bouquet</td><td><span class="status-badge status-delivered">Yes</span></td><td><span class="status-badge status-processing">Scheduled</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════ CUSTOMERS ════════════════════ -->
+    <section class="panel" id="panel-customers" aria-label="Customers panel">
+      <div class="panel-inner">
+        <div class="panel-header"><h2>Customers</h2><p>Customer database and relationship management</p></div>
+        <div class="kpi-grid">
+          <div class="kpi-card kpi-rose"><div class="kpi-icon"><i data-lucide="users"></i></div><div class="kpi-body"><span class="kpi-label">Total Customers</span><span class="kpi-value">52,418</span><span class="kpi-delta kpi-up">+1,284 this month</span></div></div>
+          <div class="kpi-card kpi-green"><div class="kpi-icon"><i data-lucide="user-check"></i></div><div class="kpi-body"><span class="kpi-label">Active Subscribers</span><span class="kpi-value">1,842</span><span class="kpi-delta kpi-up">3.5% of base</span></div></div>
+          <div class="kpi-card kpi-gold"><div class="kpi-icon"><i data-lucide="repeat-2"></i></div><div class="kpi-body"><span class="kpi-label">Repeat Customers</span><span class="kpi-value">33,748</span><span class="kpi-delta kpi-up">64.3%</span></div></div>
+          <div class="kpi-card kpi-plum"><div class="kpi-icon"><i data-lucide="crown"></i></div><div class="kpi-body"><span class="kpi-label">Gold Rose Members</span><span class="kpi-value">412</span><span class="kpi-delta kpi-up">Top tier</span></div></div>
+        </div>
+        <div class="filter-row" style="margin-top:var(--space-4)">
+          <div class="filter-search"><i data-lucide="search"></i><input type="search" placeholder="Search customers…" /></div>
+          <select class="filter-select"><option>All Plans</option><option>Blossom</option><option>Bloom</option><option>Petal & Gold</option></select>
+          <button class="btn btn-primary btn-sm">Export List</button>
+        </div>
+        <div class="table-card">
+          <div class="table-scroll">
+            <table class="dash-table">
+              <thead><tr><th>Customer</th><th>Email</th><th>Plan</th><th>Total Orders</th><th>Lifetime Value</th><th>Joined</th><th>Action</th></tr></thead>
+              <tbody>
+                <tr><td><div class="cust-name-cell"><img src="https://i.pravatar.cc/40?img=47" alt="" width="32" height="32" style="border-radius:50%;"/> Priya Mehta</div></td><td>priya@email.com</td><td><span class="badge badge-rose">Bloom</span></td><td>14</td><td>₹22,140</td><td>Jan 2024</td><td><button class="btn btn-sm btn-secondary">View</button></td></tr>
+                <tr><td><div class="cust-name-cell"><img src="https://i.pravatar.cc/40?img=12" alt="" width="32" height="32" style="border-radius:50%;"/> Arjun Kapoor</div></td><td>arjun@email.com</td><td><span class="badge badge-gold">Petal & Gold</span></td><td>8</td><td>₹31,990</td><td>Feb 2024</td><td><button class="btn btn-sm btn-secondary">View</button></td></tr>
+                <tr><td><div class="cust-name-cell"><img src="https://i.pravatar.cc/40?img=32" alt="" width="32" height="32" style="border-radius:50%;"/> Sneha Rao</div></td><td>sneha@email.com</td><td><span class="badge badge-primary">Blossom</span></td><td>5</td><td>₹6,240</td><td>Mar 2024</td><td><button class="btn btn-sm btn-secondary">View</button></td></tr>
+                <tr><td><div class="cust-name-cell"><img src="https://i.pravatar.cc/40?img=15" alt="" width="32" height="32" style="border-radius:50%;"/> Vikram T.</div></td><td>vikram@email.com</td><td><span class="badge badge-rose">Bloom</span></td><td>21</td><td>₹41,820</td><td>Nov 2023</td><td><button class="btn btn-sm btn-secondary">View</button></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════ REVIEWS ════════════════════ -->
+    <section class="panel" id="panel-reviews" aria-label="Reviews panel">
+      <div class="panel-inner">
+        <div class="panel-header"><h2>Reviews &amp; Ratings</h2><p>Monitor customer feedback and respond to reviews</p></div>
+        <div class="kpi-grid">
+          <div class="kpi-card kpi-gold"><div class="kpi-icon"><i data-lucide="star"></i></div><div class="kpi-body"><span class="kpi-label">Overall Rating</span><span class="kpi-value">4.87 ★</span><span class="kpi-delta kpi-up">From 8,421 reviews</span></div></div>
+          <div class="kpi-card kpi-green"><div class="kpi-icon"><i data-lucide="thumbs-up"></i></div><div class="kpi-body"><span class="kpi-label">5-Star Reviews</span><span class="kpi-value">74%</span><span class="kpi-delta kpi-up">+3% this month</span></div></div>
+          <div class="kpi-card kpi-rose"><div class="kpi-icon"><i data-lucide="message-circle"></i></div><div class="kpi-body"><span class="kpi-label">Pending Response</span><span class="kpi-value">5</span><span class="kpi-delta">Needs attention</span></div></div>
+          <div class="kpi-card kpi-plum"><div class="kpi-icon"><i data-lucide="flag"></i></div><div class="kpi-body"><span class="kpi-label">Flagged Reviews</span><span class="kpi-value">2</span><span class="kpi-delta kpi-down">Review required</span></div></div>
+        </div>
+        <div class="reviews-list" style="margin-top:var(--space-4)">
+          <div class="review-admin-card">
+            <div class="review-admin-header">
+              <img src="https://i.pravatar.cc/48?img=47" alt="Priya Mehta" width="40" height="40" style="border-radius:50%;" />
+              <div>
+                <strong>Priya Mehta</strong>
+                <div style="color:var(--color-gold);font-size:13px;">★★★★★</div>
+              </div>
+              <span class="review-date" style="margin-left:auto;font-size:12px;color:var(--text-muted);">Mar 28, 2025</span>
+              <span class="status-badge status-pending">Awaiting Reply</span>
+            </div>
+            <p style="font-size:14px;color:var(--text-muted);margin:10px 0;">"The anniversary bouquet was absolutely stunning! Arrived exactly on time and the flowers stayed fresh for 10 days. Will definitely subscribe!"</p>
+            <button class="btn btn-sm btn-primary">Reply</button>
+          </div>
+          <div class="review-admin-card">
+            <div class="review-admin-header">
+              <img src="https://i.pravatar.cc/48?img=12" alt="Arjun Kapoor" width="40" height="40" style="border-radius:50%;" />
+              <div><strong>Arjun Kapoor</strong><div style="color:var(--color-gold);font-size:13px;">★★★★★</div></div>
+              <span class="review-date" style="margin-left:auto;font-size:12px;color:var(--text-muted);">Mar 25, 2025</span>
+              <span class="status-badge status-delivered">Replied</span>
+            </div>
+            <p style="font-size:14px;color:var(--text-muted);margin:10px 0;">"Petal & Gold is worth every rupee. The florist consultation was personal and thoughtful. My wife was moved to tears."</p>
+            <button class="btn btn-sm btn-secondary">View Reply</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════ MESSAGES ════════════════════ -->
+    <section class="panel" id="panel-messages" aria-label="Messages panel">
+      <div class="panel-inner">
+        <div class="panel-header"><h2>Messages</h2><p>Customer enquiries and support messages</p></div>
+        <div class="messages-layout">
+          <div class="messages-list">
+            <div class="msg-item msg-item-active">
+              <img src="https://i.pravatar.cc/40?img=55" alt="" width="36" height="36" style="border-radius:50%;flex-shrink:0;" />
+              <div class="msg-item-body">
+                <strong>Riya Sharma</strong>
+                <span>Can I customize my bouquet?</span>
+                <span class="msg-time">2m ago</span>
+              </div>
+              <span class="msg-unread">1</span>
+            </div>
+            <div class="msg-item">
+              <img src="https://i.pravatar.cc/40?img=22" alt="" width="36" height="36" style="border-radius:50%;flex-shrink:0;" />
+              <div class="msg-item-body">
+                <strong>Neel Patel</strong>
+                <span>When will my order arrive?</span>
+                <span class="msg-time">15m ago</span>
+              </div>
+              <span class="msg-unread">2</span>
+            </div>
+            <div class="msg-item">
+              <img src="https://i.pravatar.cc/40?img=33" alt="" width="36" height="36" style="border-radius:50%;flex-shrink:0;" />
+              <div class="msg-item-body">
+                <strong>Kavya Nair</strong>
+                <span>Thank you for the quick delivery!</span>
+                <span class="msg-time">1h ago</span>
+              </div>
+            </div>
+          </div>
+          <div class="messages-chat">
+            <div class="chat-header">
+              <img src="https://i.pravatar.cc/40?img=55" alt="Riya Sharma" width="36" height="36" style="border-radius:50%;" />
+              <div><strong>Riya Sharma</strong><span style="font-size:12px;color:var(--color-secondary);">● Online</span></div>
+            </div>
+            <div class="chat-body">
+              <div class="chat-bubble chat-bubble-in">Hi! I wanted to know if I can customize my bouquet for a anniversary with specific flowers?</div>
+              <div class="chat-bubble chat-bubble-out">Hello Riya! Absolutely, we offer full customization on all our premium plans. Could you share the flowers you have in mind?</div>
+              <div class="chat-bubble chat-bubble-in">Can I request white lilies and red roses together?</div>
+            </div>
+            <div class="chat-input-wrap">
+              <input type="text" class="chat-input" placeholder="Type a reply…" aria-label="Type message" />
+              <button class="btn btn-primary btn-sm">Send <i data-lucide="send" style="width:14px;height:14px;"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════ BLOG CMS ════════════════════ -->
+    <section class="panel" id="panel-blog" aria-label="Blog CMS panel">
+      <div class="panel-inner">
+        <div class="panel-header"><h2>Blog CMS</h2><p>Manage articles, categories and SEO</p></div>
+        <div class="filter-row">
+          <div class="filter-search"><i data-lucide="search"></i><input type="search" placeholder="Search articles…" /></div>
+          <select class="filter-select"><option>All Categories</option><option>Flower Care</option><option>Gifting</option><option>Wedding</option></select>
+          <button class="btn btn-primary btn-sm"><i data-lucide="plus" style="width:14px;height:14px;"></i> New Article</button>
+        </div>
+        <div class="table-card">
+          <div class="table-scroll">
+            <table class="dash-table">
+              <thead><tr><th>Title</th><th>Category</th><th>Author</th><th>Published</th><th>Views</th><th>Status</th><th>Action</th></tr></thead>
+              <tbody>
+                <tr><td>10 Tips to Keep Roses Fresh Longer</td><td>Flower Care</td><td>Aanya S.</td><td>Mar 15, 2025</td><td>4,821</td><td><span class="status-badge status-delivered">Published</span></td><td><button class="btn btn-sm btn-secondary">Edit</button></td></tr>
+                <tr><td>Best Flowers for a First Anniversary</td><td>Gifting Ideas</td><td>Priya T.</td><td>Mar 10, 2025</td><td>3,214</td><td><span class="status-badge status-delivered">Published</span></td><td><button class="btn btn-sm btn-secondary">Edit</button></td></tr>
+                <tr><td>Spring 2025 Floral Trends</td><td>Seasonal</td><td>Aanya S.</td><td>–</td><td>–</td><td><span class="status-badge status-processing">Draft</span></td><td><button class="btn btn-sm btn-primary">Publish</button></td></tr>
+                <tr><td>How to Plan Wedding Floral Décor</td><td>Wedding</td><td>Meera K.</td><td>Feb 28, 2025</td><td>7,102</td><td><span class="status-badge status-delivered">Published</span></td><td><button class="btn btn-sm btn-secondary">Edit</button></td></tr>
+                <tr><td>Romantic Flowers That Say 'I Love You'</td><td>Romantic</td><td>Priya T.</td><td>–</td><td>–</td><td><span class="status-badge status-pending">Scheduled</span></td><td><button class="btn btn-sm btn-secondary">Edit</button></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════ PROMOTIONS ════════════════════ -->
+    <section class="panel" id="panel-promotions" aria-label="Promotions panel">
+      <div class="panel-inner">
+        <div class="panel-header"><h2>Promotions &amp; Coupons</h2><p>Manage discount codes and campaigns</p></div>
+        <div class="filter-row">
+          <div class="filter-search"><i data-lucide="search"></i><input type="search" placeholder="Search coupon code…" /></div>
+          <button class="btn btn-primary btn-sm"><i data-lucide="plus" style="width:14px;height:14px;"></i> Create Coupon</button>
+        </div>
+        <div class="table-card">
+          <div class="table-scroll">
+            <table class="dash-table">
+              <thead><tr><th>Code</th><th>Type</th><th>Discount</th><th>Used</th><th>Limit</th><th>Expiry</th><th>Status</th><th>Action</th></tr></thead>
+              <tbody>
+                <tr><td><code>LOVE20</code></td><td>Percentage</td><td>20% off</td><td>412</td><td>500</td><td>Apr 14, 2025</td><td><span class="status-badge status-delivered">Active</span></td><td><button class="btn btn-sm btn-secondary">Edit</button></td></tr>
+                <tr><td><code>WELCOME100</code></td><td>Flat</td><td>₹100 off</td><td>1,204</td><td>Unlimited</td><td>Dec 31, 2025</td><td><span class="status-badge status-delivered">Active</span></td><td><button class="btn btn-sm btn-secondary">Edit</button></td></tr>
+                <tr><td><code>BLOOM30</code></td><td>Percentage</td><td>30% off</td><td>89</td><td>100</td><td>Mar 31, 2025</td><td><span class="status-badge status-pending">Expired</span></td><td><button class="btn btn-sm btn-secondary">Renew</button></td></tr>
+                <tr><td><code>ANNIV50</code></td><td>Flat</td><td>₹50 off</td><td>0</td><td>200</td><td>Jun 1, 2025</td><td><span class="status-badge status-processing">Draft</span></td><td><button class="btn btn-sm btn-primary">Activate</button></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════ REPORTS ════════════════════ -->
+    <section class="panel" id="panel-reports" aria-label="Reports panel">
+      <div class="panel-inner">
+        <div class="panel-header"><h2>Reports</h2><p>Download and schedule financial and operational reports</p></div>
+        <div class="reports-grid">
+          <div class="report-card">
+            <div class="report-icon"><i data-lucide="file-bar-chart-2"></i></div>
+            <h4>Sales Report</h4>
+            <p>Monthly and weekly revenue breakdown by product, category, and region.</p>
+            <div class="report-actions">
+              <select class="filter-select" style="flex:1"><option>March 2025</option><option>February 2025</option></select>
+              <button class="btn btn-primary btn-sm">Download</button>
+            </div>
+          </div>
+          <div class="report-card">
+            <div class="report-icon"><i data-lucide="users"></i></div>
+            <h4>Customer Report</h4>
+            <p>Acquisition, retention, churn, and lifetime value analysis.</p>
+            <div class="report-actions">
+              <select class="filter-select" style="flex:1"><option>Q1 2025</option><option>Q4 2024</option></select>
+              <button class="btn btn-primary btn-sm">Download</button>
+            </div>
+          </div>
+          <div class="report-card">
+            <div class="report-icon"><i data-lucide="truck"></i></div>
+            <h4>Delivery Report</h4>
+            <p>On-time rate, failed attempts, and city-wise performance metrics.</p>
+            <div class="report-actions">
+              <select class="filter-select" style="flex:1"><option>March 2025</option><option>February 2025</option></select>
+              <button class="btn btn-primary btn-sm">Download</button>
+            </div>
+          </div>
+          <div class="report-card">
+            <div class="report-icon"><i data-lucide="package"></i></div>
+            <h4>Inventory Report</h4>
+            <p>Stock movement, wastage, and reorder summary for all items.</p>
+            <div class="report-actions">
+              <select class="filter-select" style="flex:1"><option>March 2025</option><option>February 2025</option></select>
+              <button class="btn btn-primary btn-sm">Download</button>
+            </div>
+          </div>
+          <div class="report-card">
+            <div class="report-icon"><i data-lucide="star"></i></div>
+            <h4>Reviews Report</h4>
+            <p>Sentiment analysis, response rate, and rating distribution.</p>
+            <div class="report-actions">
+              <select class="filter-select" style="flex:1"><option>March 2025</option><option>February 2025</option></select>
+              <button class="btn btn-primary btn-sm">Download</button>
+            </div>
+          </div>
+          <div class="report-card">
+            <div class="report-icon"><i data-lucide="tag"></i></div>
+            <h4>Promotions Report</h4>
+            <p>Coupon usage, conversion rates, and campaign ROI summary.</p>
+            <div class="report-actions">
+              <select class="filter-select" style="flex:1"><option>March 2025</option><option>February 2025</option></select>
+              <button class="btn btn-primary btn-sm">Download</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════ SETTINGS ════════════════════ -->
+    <section class="panel" id="panel-settings" aria-label="Settings panel">
+      <div class="panel-inner">
+        <div class="panel-header"><h2>Settings</h2><p>Configure your store, profile, and system preferences</p></div>
+        <div class="settings-layout">
+
+          <!-- Profile Settings -->
+          <div class="settings-card">
+            <h3 class="settings-section-title"><i data-lucide="user"></i> Profile</h3>
+            <div class="settings-form">
+              <label>Full Name
+                <input type="text" value="Aanya Sharma" class="settings-input" />
+              </label>
+              <label>Email
+                <input type="email" value="hr@roseanstem.com" class="settings-input" />
+              </label>
+              <label>Phone
+                <input type="tel" value="+91 (987) 654-3210" class="settings-input" />
+              </label>
+              <label>Role
+                <input type="text" value="Super Admin" class="settings-input" readonly />
+              </label>
+              <button class="btn btn-primary btn-sm" style="margin-top:4px;">Save Profile</button>
+            </div>
+          </div>
+
+          <!-- Store Settings -->
+          <div class="settings-card">
+            <h3 class="settings-section-title"><i data-lucide="store"></i> Store</h3>
+            <div class="settings-form">
+              <label>Store Name
+                <input type="text" value="Rose & Stem" class="settings-input" />
+              </label>
+              <label>Store Email
+                <input type="email" value="hr@roseanstem.com" class="settings-input" />
+              </label>
+              <label>Contact Number
+                <input type="tel" value="+91 (987) 654-3210" class="settings-input" />
+              </label>
+              <label>Currency
+                <select class="settings-input"><option>INR (₹)</option></select>
+              </label>
+              <button class="btn btn-primary btn-sm" style="margin-top:4px;">Save Store Info</button>
+            </div>
+          </div>
+
+          <!-- Notification Settings -->
+          <div class="settings-card settings-card-full">
+            <h3 class="settings-section-title"><i data-lucide="bell"></i> Notification Preferences</h3>
+            <div class="settings-toggles">
+              <div class="settings-toggle-item">
+                <div><strong>New Order Alerts</strong><span>Get notified for every new order placed</span></div>
+                <label class="toggle-switch" aria-label="New order alerts">
+                  <input type="checkbox" checked />
+                  <span class="toggle-slider"></span>
+                </label>
+              </div>
+              <div class="settings-toggle-item">
+                <div><strong>Low Stock Alerts</strong><span>Alert when inventory falls below threshold</span></div>
+                <label class="toggle-switch" aria-label="Low stock alerts">
+                  <input type="checkbox" checked />
+                  <span class="toggle-slider"></span>
+                </label>
+              </div>
+              <div class="settings-toggle-item">
+                <div><strong>New Review Notifications</strong><span>Notify when a new review is submitted</span></div>
+                <label class="toggle-switch" aria-label="Review notifications">
+                  <input type="checkbox" checked />
+                  <span class="toggle-slider"></span>
+                </label>
+              </div>
+              <div class="settings-toggle-item">
+                <div><strong>Subscription Renewals</strong><span>Alert 3 days before subscription renewal</span></div>
+                <label class="toggle-switch" aria-label="Subscription renewal alerts">
+                  <input type="checkbox" />
+                  <span class="toggle-slider"></span>
+                </label>
+              </div>
+              <div class="settings-toggle-item">
+                <div><strong>Daily Revenue Summary</strong><span>Email summary of daily revenue at 9 PM</span></div>
+                <label class="toggle-switch" aria-label="Daily revenue summary">
+                  <input type="checkbox" checked />
+                  <span class="toggle-slider"></span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Security -->
+          <div class="settings-card settings-card-full">
+            <h3 class="settings-section-title"><i data-lucide="shield"></i> Security</h3>
+            <div class="settings-form settings-form-row">
+              <label>Current Password<input type="password" placeholder="••••••••" class="settings-input" /></label>
+              <label>New Password<input type="password" placeholder="••••••••" class="settings-input" /></label>
+              <label>Confirm Password<input type="password" placeholder="••••••••" class="settings-input" /></label>
+            </div>
+            <button class="btn btn-secondary btn-sm" style="margin-top:12px;">Update Password</button>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </div><!-- /panels-container -->
+
+</div><!-- /dash-main -->
+
+<!-- Sidebar overlay for mobile -->
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+<!-- Logout Confirm Modal -->
+<div class="modal-backdrop" id="logoutModal" role="dialog" aria-modal="true" aria-labelledby="logoutModalTitle">
+  <div class="modal">
+    <div class="modal-header">
+      <h3 id="logoutModalTitle" style="font-family:var(--font-heading);color:var(--text-heading);">Sign Out?</h3>
+      <button class="modal-close" onclick="closeModal('logoutModal')" aria-label="Close"><i data-lucide="x"></i></button>
+    </div>
+    <div class="modal-body" style="text-align:center;padding:var(--space-5);">
+      <div style="font-size:48px;margin-bottom:16px;">🌹</div>
+      <p style="color:var(--text-muted);margin-bottom:var(--space-4);">Are you sure you want to sign out of the Rose & Stem admin dashboard?</p>
+      <div style="display:flex;gap:12px;justify-content:center;">
+        <button class="btn btn-secondary" onclick="closeModal('logoutModal')">Cancel</button>
+        <a href="../login/login.html" class="btn btn-primary">Yes, Sign Out</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Global JS -->
+<script src="../global-js/global.js"></script>
+<!-- Dashboard JS -->
+<script src="dashboard.js"></script>
+</body>
+</html>
