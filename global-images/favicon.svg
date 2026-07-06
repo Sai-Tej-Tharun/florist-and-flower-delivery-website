@@ -1,0 +1,33 @@
+<svg aria-label="Rose and Stem logo" role="img" fill="none" viewBox="8.25515947467167 5.985611510791367 34.52157598499062 42.27338129496403" xmlns="http://www.w3.org/2000/svg" style="max-height: 500px" width="34.52157598499062" height="42.27338129496403">
+  
+  <g transform="translate(4, 4)">
+    
+    <ellipse transform="rotate(-30 22 16)" opacity="0.85" fill="#C84C6A" ry="10" rx="7" cy="16" cx="22"/>
+    <ellipse transform="rotate(30 22 16)" opacity="0.85" fill="#C84C6A" ry="10" rx="7" cy="16" cx="22"/>
+    <ellipse transform="rotate(90 22 16)" opacity="0.80" fill="#D97A8C" ry="10" rx="7" cy="16" cx="22"/>
+    <ellipse transform="rotate(-90 22 16)" opacity="0.80" fill="#D97A8C" ry="10" rx="7" cy="16" cx="22"/>
+    
+    <ellipse transform="rotate(0 22 16)" opacity="0.90" fill="#EFA3B1" ry="7.5" rx="5" cy="16" cx="22"/>
+    <ellipse transform="rotate(60 22 16)" opacity="0.90" fill="#EFA3B1" ry="7.5" rx="5" cy="16" cx="22"/>
+    <ellipse transform="rotate(-60 22 16)" opacity="0.90" fill="#EFA3B1" ry="7.5" rx="5" cy="16" cx="22"/>
+    
+    <circle opacity="0.95" fill="#E6C07B" r="5" cy="16" cx="22"/>
+    <circle fill="#C84C6A" r="2.5" cy="16" cx="22"/>
+    
+    <path stroke-linecap="round" stroke-width="2" stroke="#5E8B7E" d="M22 26 C21 30 20 35 21 42"/>
+    
+    <path opacity="0.9" fill="#5E8B7E" d="M21 33 C17 31 14 33 16 37 C18 35 21 34 21 33Z"/>
+  </g>
+
+  
+  <text letter-spacing="-0.5" fill="#5A1E2A" font-style="italic" font-weight="700" font-size="22" font-family="Georgia, 'Playfair Display', serif" y="24" x="52">Rose</text>
+
+  
+  <text opacity="0.85" fill="#C84C6A" font-weight="400" font-size="16" font-family="Georgia, serif" y="24" x="104">&amp;</text>
+
+  
+  <text letter-spacing="1" fill="#5A1E2A" font-weight="600" font-size="22" font-family="Georgia, 'Playfair Display', serif" y="24" x="118">Stem</text>
+
+  
+  <text letter-spacing="2.5" fill="#7A7A7A" font-weight="500" font-size="9" font-family="'Inter', Arial, sans-serif" y="38" x="52">FLORIST &amp; DELIVERY</text>
+</svg>

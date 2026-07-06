@@ -1,0 +1,309 @@
+<!-- ============================================================
+     ROSE & STEM — Navbar Component v2.0
+     ============================================================ -->
+
+<nav class="navbar" role="navigation" aria-label="Main navigation">
+  <div class="navbar-inner">
+
+    <!-- Logo -->
+<a href="../home-1/home.html" class="navbar-logo">
+
+  <img src="../global-images/logo-pink.svg"
+       class="logo-light"
+       alt="Rose & Stem">
+
+  <img src="../global-images/logo-white.svg"
+       class="logo-dark"
+       alt="Rose & Stem">
+
+</a>
+
+    <!-- Desktop Nav -->
+    <ul class="navbar-nav" role="menubar" aria-label="Primary navigation">
+
+      <!-- Home dropdown -->
+<!-- Home dropdown -->
+<li class="nav-item has-dropdown" role="none">
+  <a href="../home-1/home.html" class="nav-link" role="menuitem" aria-haspopup="true" aria-expanded="false">
+    Home
+    <svg class="chevron" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+      <polyline points="6 9 12 15 18 9"/>
+    </svg>
+  </a>
+
+  <ul class="dropdown-menu" role="menu" aria-label="Home pages">
+    <li role="none">
+      <a href="../home-1/home.html" class="dropdown-item" role="menuitem">
+        Home — General Landing
+      </a>
+    </li>
+
+    <li role="none">
+      <a href="../home-2/home.html" class="dropdown-item" role="menuitem">
+        Home — Subscription &amp; Reminders
+      </a>
+    </li>
+  </ul>
+</li>
+
+      <li class="nav-item" role="none"><a href="../about/about.html" class="nav-link" role="menuitem">About</a></li>
+      <li class="nav-item" role="none"><a href="../services/services.html" class="nav-link" role="menuitem">Services</a></li>
+      <li class="nav-item" role="none"><a href="../pricing/pricing.html" class="nav-link" role="menuitem">Pricing</a></li>
+      <li class="nav-item" role="none"><a href="../blogs/blogs.html" class="nav-link" role="menuitem">Blog</a></li>
+      <li class="nav-item" role="none"><a href="../contact/contact.html" class="nav-link" role="menuitem">Contact</a></li>
+      <li class="nav-item" role="none"><a href="../admin-dashboard/dashboard.html" class="nav-link" role="menuitem">Dashboard</a></li>
+
+    </ul>
+
+    <!-- Right Controls -->
+<!-- Center Buttons -->
+<div class="navbar-center-actions">
+
+  <a href="../contact/contact.html"
+     class="btn btn-secondary btn-sm ns-desktop-only"
+     aria-label="Get a quote">
+    Get a Quote
+  </a>
+
+  <a href="../login/login.html"
+     class="btn btn-primary btn-sm ns-desktop-only"
+     aria-label="Log in to your account">
+    Login
+  </a>
+
+</div>
+
+<!-- Right Controls -->
+<div class="navbar-controls">
+
+  <button class="theme-toggle ns-desktop-only"
+          aria-label="Toggle dark/light mode"
+          title="Toggle theme">
+
+    <svg class="icon-moon"
+         xmlns="http://www.w3.org/2000/svg"
+         width="18"
+         height="18"
+         viewBox="0 0 24 24"
+         fill="none"
+         stroke="currentColor"
+         stroke-width="2">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+    </svg>
+
+    <svg class="icon-sun"
+         xmlns="http://www.w3.org/2000/svg"
+         width="18"
+         height="18"
+         viewBox="0 0 24 24"
+         fill="none"
+         stroke="currentColor"
+         stroke-width="2"
+         style="display:none">
+      <circle cx="12" cy="12" r="5"/>
+      <line x1="12" y1="1" x2="12" y2="3"/>
+      <line x1="12" y1="21" x2="12" y2="23"/>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+      <line x1="1" y1="12" x2="3" y2="12"/>
+      <line x1="21" y1="12" x2="23" y2="12"/>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+    </svg>
+
+  </button>
+
+  <button class="rtl-toggle ns-desktop-only"
+          aria-label="Toggle RTL"
+          title="Toggle RTL">
+    <span class="rtl-text">RTL</span>
+  </button>
+
+  <!-- Mobile Hamburger -->
+  <button class="navbar-toggle"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          style="display:flex;flex-direction:column;justify-content:center;align-items:center;gap:5px;width:40px;height:40px;padding:8px;cursor:pointer;background:transparent;border:1.5px solid var(--border-color,#E9E4E1);border-radius:8px;flex-shrink:0;">
+
+    <span style="display:block;width:18px;height:2px;background:var(--text-body,#2B2B2B);border-radius:2px;transition:all .3s ease;"></span>
+    <span style="display:block;width:18px;height:2px;background:var(--text-body,#2B2B2B);border-radius:2px;transition:all .3s ease;"></span>
+    <span style="display:block;width:18px;height:2px;background:var(--text-body,#2B2B2B);border-radius:2px;transition:all .3s ease;"></span>
+
+  </button>
+
+</div>
+
+  </div>
+</nav>
+
+<!-- Mobile Menu Overlay -->
+<div id="mobile-menu" class="mobile-menu" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+
+  <!-- Flat links — no sub-dropdowns -->
+  <a href="../home-1/home.html" class="mobile-nav-link">Home — General Landing</a>
+  <a href="../home-2/home.html" class="mobile-nav-link">Home — Subscription</a>
+  <a href="../about/about.html" class="mobile-nav-link">About</a>
+  <a href="../services/services.html" class="mobile-nav-link">Services</a>
+  <a href="../pricing/pricing.html" class="mobile-nav-link">Pricing</a>
+  <a href="../blogs/blogs.html" class="mobile-nav-link">Blog</a>
+  <a href="../contact/contact.html" class="mobile-nav-link">Contact</a>
+  <a href="../admin-dashboard/dashboard.html" class="mobile-nav-link">Dashboard</a>
+
+  <!-- Theme + RTL toggles inside mobile menu -->
+  <div class="mobile-menu-controls">
+    <button class="theme-toggle mobile-ctrl-btn" aria-label="Toggle dark mode">
+      <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" style="display:none"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/></svg>
+      <span>Toggle Theme</span>
+    </button>
+<button class="rtl-toggle mobile-ctrl-btn" aria-label="Toggle RTL">
+  <span class="rtl-text">RTL</span>
+</button>
+  </div>
+
+  <div class="mobile-menu-btns">
+    <a href="../contact/contact.html" class="btn btn-secondary btn-block">Get a Quote</a>
+    <a href="../login/login.html" class="btn btn-primary btn-block">Login</a>
+  </div>
+
+</div>
+
+<style>
+/* ── Active link highlight ── */
+.nav-link.active,
+.dropdown-item.active {
+  color: var(--color-primary) !important;
+  background: var(--color-primary-light);
+  font-weight: var(--weight-semibold);
+}
+.nav-link.active::after {
+  transform: scaleX(1) !important;
+}
+[data-theme="dark"] .nav-link.active,
+[data-theme="dark"] .dropdown-item.active {
+  background: rgba(224,107,135,0.15);
+}
+.mobile-nav-link.active {
+  color: var(--color-primary) !important;
+  background: var(--color-primary-light);
+  border-left: 3px solid var(--color-primary);
+  padding-left: 13px;
+}
+[data-theme="dark"] .mobile-nav-link.active {
+  background: rgba(224,107,135,0.15);
+}
+
+/* ── Dropdown hover bridge — invisible gap keeps menu open ── */
+.nav-item.has-dropdown {
+  padding-bottom: 10px;
+  margin-bottom: -10px;
+}
+.dropdown-menu {
+  transition: opacity 0.22s ease, transform 0.22s ease, visibility 0.22s ease !important;
+  transition-delay: 0s !important;
+}
+.nav-item.has-dropdown:hover .dropdown-menu,
+.nav-item.has-dropdown.open .dropdown-menu {
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: all !important;
+  transform: translateX(-50%) translateY(0) !important;
+}
+
+/* ── Desktop-only items: hide on mobile ── */
+@media (max-width: 1024px) {
+  .ns-desktop-only { display: none !important; }
+  .navbar-nav { display: none !important; }
+}
+
+/* ── Hamburger: hide on desktop ── */
+@media (min-width: 1025px) {
+  .navbar-toggle { display: none !important; }
+}
+
+/* ── Hamburger active (X) animation ── */
+.navbar-toggle.active span:nth-child(1) { transform: translateY(7px) rotate(45deg) !important; }
+.navbar-toggle.active span:nth-child(2) { opacity: 0 !important; transform: scaleX(0) !important; }
+.navbar-toggle.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg) !important; }
+
+/* ── Mobile menu: force show/hide properly ── */
+.mobile-menu {
+  display: block !important;        /* always in DOM, controlled by transform */
+  position: fixed;
+  top: var(--navbar-height, 72px);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--bg-page, #FFF8F6);
+  z-index: 299;
+  overflow-y: auto;
+  padding: 16px;
+  transform: translateX(-100%);
+  transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -webkit-overflow-scrolling: touch;
+}
+.mobile-menu.open {
+  transform: translateX(0);
+}
+
+/* ── Mobile ctrl buttons ── */
+.mobile-ctrl-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-body, #2B2B2B);
+  background: transparent;
+  border: 1.5px solid var(--border-color, #E9E4E1);
+  cursor: pointer;
+  flex: 1;
+  justify-content: center;
+  transition: all 0.15s ease;
+}
+.mobile-ctrl-btn:hover {
+  background: var(--color-primary-light, #F7D6DC);
+  border-color: var(--color-primary, #C84C6A);
+  color: var(--color-primary, #C84C6A);
+}
+
+/* ── Mobile nav links ── */
+.mobile-menu .mobile-nav-link {
+  display: flex;
+  align-items: center;
+  padding: 14px 16px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text-body, #2B2B2B);
+  text-decoration: none;
+  border-bottom: 1px solid var(--border-color, #E9E4E1);
+  transition: all 0.15s ease;
+}
+.mobile-menu .mobile-nav-link:hover {
+  color: var(--color-primary, #C84C6A);
+  background: var(--color-primary-light, #F7D6DC);
+}
+
+/* ── Mobile menu controls row ── */
+.mobile-menu-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 0;
+  border-top: 1px solid var(--border-color, #E9E4E1);
+  margin-top: 8px;
+}
+
+/* ── Mobile CTA buttons ── */
+.mobile-menu-btns {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 12px 0;
+  border-top: 1px solid var(--border-color, #E9E4E1);
+}
+</style>
