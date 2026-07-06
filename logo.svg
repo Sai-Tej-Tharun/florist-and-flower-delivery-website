@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 52" fill="none" role="img" aria-label="Rose &amp; Stem logo">
+  <!-- Stem line art -->
+  <path d="M18 42 C18 42 16 34 20 28 C24 22 22 16 18 12" stroke="#5E8B7E" stroke-width="2" stroke-linecap="round" fill="none"/>
+  <!-- Leaf left -->
+  <path d="M18 28 C14 24 10 26 10 30 C14 32 18 28 18 28Z" fill="#5E8B7E" opacity="0.85"/>
+  <!-- Leaf right -->
+  <path d="M20 22 C24 18 28 20 27 24 C23 26 20 22 20 22Z" fill="#A7C4BC" opacity="0.85"/>
+  <!-- Rose bud outer petals -->
+  <ellipse cx="18" cy="10" rx="5" ry="4" fill="#EFA3B1" opacity="0.9" transform="rotate(-15 18 10)"/>
+  <ellipse cx="21" cy="11" rx="5" ry="4" fill="#D97A8C" opacity="0.85" transform="rotate(10 21 11)"/>
+  <ellipse cx="15" cy="11" rx="4.5" ry="4" fill="#C84C6A" opacity="0.9" transform="rotate(-30 15 11)"/>
+  <!-- Rose bud center -->
+  <ellipse cx="18" cy="10" rx="3" ry="3.5" fill="#5A1E2A"/>
+  <!-- Inner spiral hint -->
+  <path d="M18 8 C19.5 8.5 20 10 18.5 11.5 C17 11 16.5 9.5 18 8Z" fill="#C84C6A" opacity="0.7"/>
+  <!-- Brand text -->
+  <text x="34" y="20" font-family="'Playfair Display', Georgia, serif" font-size="15" font-weight="700" fill="#5A1E2A" letter-spacing="0.5">Rose</text>
+  <!-- Ampersand in accent color -->
+  <text x="72" y="20" font-family="'Great Vibes', cursive" font-size="13" fill="#C84C6A">&amp;</text>
+  <text x="83" y="20" font-family="'Playfair Display', Georgia, serif" font-size="15" font-weight="400" fill="#5A1E2A" letter-spacing="1">Stem</text>
+  <!-- Tagline -->
+  <text x="34" y="34" font-family="'Inter', sans-serif" font-size="7" font-weight="500" fill="#7A7A7A" letter-spacing="2.5">FLORAL BOUTIQUE</text>
+  <!-- Decorative line under brand name -->
+  <line x1="34" y1="23" x2="118" y2="23" stroke="#EFA3B1" stroke-width="0.75" opacity="0.6"/>
+</svg>

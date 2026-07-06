@@ -1,0 +1,1049 @@
+/* ============================================================
+   ROSE & STEM — Login / Register Shared CSS
+   login/login.css
+   Both pages import this file. register.css adds overrides.
+   ============================================================
+
+   TABLE OF CONTENTS
+   1.  Design Tokens (self-contained — no global.css needed)
+   2.  Reset & Base
+   3.  Page Layout (viewport-locked split panels)
+   4.  Left Panel — rose animation side
+   5.  Right Panel — form card side
+   6.  Auth Card
+   7.  Logo
+   8.  Auth Header
+   9.  Social Buttons (Google + Apple)
+   10. Auth Divider
+   11. Form Fields
+   12. Password Toggle + Strength
+   13. Remember Me / Checkbox
+   14. Submit Button
+   15. Auth Switch (login ↔ register link)
+   16. Corner Controls (theme + RTL toggles)
+   17. Rose SVG Animation (CSS-driven)
+   18. Responsive
+   ============================================================ */
+
+
+/* ============================================================
+   1. DESIGN TOKENS
+   Self-contained — works without global.css
+   ============================================================ */
+:root,
+[data-theme="light"] {
+  --rs-primary:       #C84C6A;
+  --rs-primary-dark:  #5A1E2A;
+  --rs-primary-light: #F7D6DC;
+  --rs-petal:         #EFA3B1;
+  --rs-gold:          #E6C07B;
+  --rs-green:         #5E8B7E;
+  --rs-green-light:   #A7C4BC;
+
+  --rs-grad-rose:     linear-gradient(135deg, #C84C6A, #EFA3B1);
+  --rs-grad-hero:     linear-gradient(145deg, #5A1E2A 0%, #8B2642 40%, #C84C6A 75%, #EFA3B1 100%);
+  --rs-grad-green:    linear-gradient(135deg, #5E8B7E, #A7C4BC);
+  --rs-grad-premium:  linear-gradient(135deg, #E6C07B, #F7D6DC);
+
+  --rs-bg:            #FFF8F6;
+  --rs-bg-card:       #FFFFFF;
+  --rs-bg-input:      #FFFFFF;
+  --rs-bg-section:    #FAF3EE;
+  --rs-border:        #E9E4E1;
+  --rs-border-input:  #D4CCC9;
+  --rs-border-focus:  #C84C6A;
+
+  --rs-text:          #2B2B2B;
+  --rs-text-heading:  #5A1E2A;
+  --rs-text-muted:    #7A7A7A;
+  --rs-text-white:    #FFFFFF;
+
+  --rs-shadow-sm:     0 2px 10px rgba(200, 76, 106, 0.08);
+  --rs-shadow-md:     0 6px 28px rgba(200, 76, 106, 0.14);
+  --rs-shadow-lg:     0 12px 48px rgba(200, 76, 106, 0.18);
+  --rs-shadow-card:   0 8px 40px rgba(90, 30, 42, 0.12);
+
+  --rs-font-heading:  'Playfair Display', Georgia, serif;
+  --rs-font-body:     'Inter', system-ui, sans-serif;
+  --rs-font-accent:   'Great Vibes', cursive;
+
+  --rs-radius-sm:     8px;
+  --rs-radius-md:     14px;
+  --rs-radius-lg:     20px;
+  --rs-radius-xl:     28px;
+  --rs-radius-pill:   999px;
+
+  --rs-transition:    all 0.22s ease;
+  --rs-transition-spring: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+[data-theme="dark"] {
+  --rs-primary:       #E06B87;
+  --rs-primary-dark:  #FAD0DA;
+  --rs-primary-light: #3D1E28;
+  --rs-petal:         #C97085;
+  --rs-gold:          #D4A84A;
+  --rs-green:         #7AADA0;
+  --rs-green-light:   #1E3530;
+
+  --rs-grad-rose:     linear-gradient(135deg, #E06B87, #C97085);
+  --rs-grad-hero:     linear-gradient(145deg, #0e0709 0%, #2a0f16 40%, #5A1E2A 75%, #8B2642 100%);
+  --rs-grad-green:    linear-gradient(135deg, #7AADA0, #4a7a6e);
+  --rs-grad-premium:  linear-gradient(135deg, #D4A84A, #8C5C74);
+
+  --rs-bg:            #120a0e;
+  --rs-bg-card:       #1e1015;
+  --rs-bg-input:      #2a1820;
+  --rs-bg-section:    #1a1015;
+  --rs-border:        #3a2028;
+  --rs-border-input:  #4a2a35;
+  --rs-border-focus:  #E06B87;
+
+  --rs-text:          #e8d8dc;
+  --rs-text-heading:  #FAD0DA;
+  --rs-text-muted:    #9a8589;
+  --rs-text-white:    #120a0e;
+
+  --rs-shadow-sm:     0 2px 10px rgba(0,0,0,0.35);
+  --rs-shadow-md:     0 6px 28px rgba(0,0,0,0.45);
+  --rs-shadow-lg:     0 12px 48px rgba(0,0,0,0.55);
+  --rs-shadow-card:   0 8px 40px rgba(0,0,0,0.5);
+}
+
+
+/* ============================================================
+   2. RESET & BASE
+   ============================================================ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  height: 100%;
+  overflow: hidden; /* viewport-locked — NO scroll */
+  font-family: var(--rs-font-body);
+  font-size: 15px;
+  color: var(--rs-text);
+  background: var(--rs-bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+a { color: var(--rs-primary); text-decoration: none; transition: var(--rs-transition); }
+a:hover { color: var(--rs-primary-dark); }
+button { cursor: pointer; border: none; background: none; font: inherit; }
+img, svg { display: block; max-width: 100%; }
+ul { list-style: none; }
+
+.skip-link {
+  position: fixed;
+  top: -100%;
+  left: 16px;
+  z-index: 9999;
+  padding: 10px 20px;
+  background: var(--rs-primary);
+  color: #fff;
+  border-radius: var(--rs-radius-sm);
+  font-weight: 600;
+  transition: top 0.2s;
+}
+.skip-link:focus { top: 12px; }
+
+::selection { background: var(--rs-primary-light); color: var(--rs-primary-dark); }
+
+:focus-visible {
+  outline: 2px solid var(--rs-primary);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--rs-bg-section); }
+::-webkit-scrollbar-thumb { background: var(--rs-petal); border-radius: 3px; }
+
+
+/* ============================================================
+   3. PAGE LAYOUT
+   ============================================================ */
+.auth-page {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+
+/* ============================================================
+   4. LEFT PANEL — decorative rose side
+   ============================================================ */
+.auth-panel-left {
+  background: var(--rs-grad-hero);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  gap: 0;
+}
+
+/* Ambient blobs */
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(55px);
+}
+
+.blob-1 {
+  width: 380px; height: 380px;
+  background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 70%);
+  top: -80px; left: -80px;
+  animation: blobFloat 9s ease-in-out infinite;
+}
+.blob-2 {
+  width: 300px; height: 300px;
+  background: radial-gradient(circle, rgba(230,192,123,0.14) 0%, transparent 70%);
+  bottom: -60px; right: -60px;
+  animation: blobFloat 11s ease-in-out infinite 3s;
+}
+.blob-3 {
+  width: 220px; height: 220px;
+  background: radial-gradient(circle, rgba(239,163,177,0.12) 0%, transparent 70%);
+  top: 45%; left: 10%;
+  animation: blobFloat 8s ease-in-out infinite 1.5s;
+}
+
+.blob-green {
+  /* For register page — more botanical feeling */
+  filter: blur(60px) hue-rotate(140deg) saturate(0.7);
+}
+
+@keyframes blobFloat {
+  0%,100% { transform: translate(0,0) scale(1); }
+  33%     { transform: translate(12px,-18px) scale(1.04); }
+  66%     { transform: translate(-8px,10px) scale(0.97); }
+}
+
+/* Rose container */
+.rose-scene {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex: 1;
+}
+
+.rose-svg {
+  width: clamp(180px, 50%, 280px);
+  height: auto;
+  filter: drop-shadow(0 8px 32px rgba(0,0,0,0.35));
+  overflow: visible;
+}
+
+/* Panel tagline text */
+.panel-tagline {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 0 var(--rs-radius-lg) clamp(24px, 4vh, 48px);
+}
+
+.tagline-script {
+  display: block;
+  font-family: var(--rs-font-accent);
+  font-size: clamp(28px, 3.5vw, 44px);
+  color: rgba(255,255,255,0.9);
+  line-height: 1.2;
+  margin-bottom: 6px;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.2);
+}
+
+.panel-tagline p {
+  font-size: clamp(12px, 1.2vw, 15px);
+  color: rgba(255,255,255,0.65);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+
+/* ============================================================
+   5. RIGHT PANEL — form side
+   ============================================================ */
+.auth-panel-right {
+  background: var(--rs-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  /* Subtle decorative texture */
+  background-image:
+    radial-gradient(ellipse 60% 40% at 110% 0%, rgba(200,76,106,0.06) 0%, transparent 60%),
+    radial-gradient(ellipse 40% 40% at -10% 100%, rgba(94,139,126,0.05) 0%, transparent 60%);
+}
+
+
+/* ============================================================
+   6. AUTH CARD
+   ============================================================ */
+.auth-card {
+  width: 100%;
+  max-width: 420px;
+  padding: clamp(28px, 4vh, 44px) clamp(24px, 3.5vw, 40px);
+  background: var(--rs-bg-card);
+  border-radius: var(--rs-radius-xl);
+  box-shadow: var(--rs-shadow-card);
+  border: 1px solid var(--rs-border);
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  /* Entrance animation */
+  animation: cardEntrance 0.65s cubic-bezier(0.34,1.56,0.64,1) both;
+}
+
+@keyframes cardEntrance {
+  from { opacity: 0; transform: translateY(24px) scale(0.97); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+
+/* ============================================================
+   7. LOGO
+   ============================================================ */
+
+
+.auth-logo:hover {
+  transform: scale(1.04);
+}
+
+.auth-logo img {
+  height: 38px;
+  width: auto;
+}
+
+
+/* ============================================================
+   8. AUTH HEADER
+   ============================================================ */
+.auth-header {
+  margin-bottom: clamp(16px, 2.5vh, 24px);
+}
+
+.auth-title {
+  font-family: var(--rs-font-heading);
+  font-size: clamp(22px, 2.5vw, 30px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--rs-text-heading);
+  line-height: 1.15;
+  margin-bottom: 5px;
+}
+
+.auth-subtitle {
+  font-size: 13.5px;
+  color: var(--rs-text-muted);
+  line-height: 1.5;
+}
+
+
+/* ============================================================
+   9. SOCIAL BUTTONS
+   ============================================================ */
+.social-auth {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: clamp(14px, 2vh, 20px);
+}
+
+/* Side-by-side layout for register */
+.social-auth-row {
+  flex-direction: row;
+  gap: 10px;
+}
+
+.social-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 11px 16px;
+  border-radius: var(--rs-radius-sm);
+  border: 1.5px solid var(--rs-border);
+  background: var(--rs-bg-card);
+  color: var(--rs-text);
+  font-size: 13.5px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--rs-transition);
+  text-align: center;
+  white-space: nowrap;
+}
+
+.social-btn:hover {
+  border-color: var(--rs-primary);
+  background: var(--rs-bg-section);
+  color: var(--rs-text-heading);
+  transform: translateY(-2px);
+  box-shadow: var(--rs-shadow-sm);
+}
+
+.social-btn-half {
+  flex: 1;
+  padding: 11px 10px;
+  font-size: 13px;
+}
+
+/* Apple — matches platform style */
+.social-btn-apple {
+  color: var(--rs-text);
+}
+
+[data-theme="dark"] .social-btn-apple svg {
+  fill: var(--rs-text);
+}
+
+.social-btn svg, .social-btn img {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+}
+
+
+/* ============================================================
+   10. DIVIDER
+   ============================================================ */
+.auth-divider {
+  position: relative;
+  text-align: center;
+  margin-bottom: clamp(14px, 2vh, 20px);
+}
+
+.auth-divider::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0; right: 0;
+  height: 1px;
+  background: var(--rs-border);
+}
+
+.auth-divider span {
+  position: relative;
+  background: var(--rs-bg-card);
+  padding: 0 14px;
+  font-size: 12px;
+  color: var(--rs-text-muted);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+
+/* ============================================================
+   11. FORM FIELDS
+   ============================================================ */
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.field-group {
+  margin-bottom: clamp(12px, 1.8vh, 16px);
+}
+
+.field-row-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.field-row-2 .field-group {
+  margin-bottom: 0;
+}
+
+.field-label {
+  display: block;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--rs-text-heading);
+  margin-bottom: 6px;
+  letter-spacing: 0.01em;
+}
+
+.field-label-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.field-label-row .field-label {
+  margin-bottom: 0;
+}
+
+.forgot-link {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--rs-primary);
+}
+
+.forgot-link:hover {
+  color: var(--rs-primary-dark);
+  text-decoration: underline;
+}
+
+.field-wrap {
+  position: relative;
+}
+
+.field-icon {
+  position: absolute;
+  left: 13px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--rs-text-muted);
+  pointer-events: none;
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+}
+
+.field-input {
+  width: 100%;
+  padding: 10px 14px 10px 40px;
+  background: var(--rs-bg-input);
+  border: 1.5px solid var(--rs-border-input);
+  border-radius: var(--rs-radius-sm);
+  font-family: var(--rs-font-body);
+  font-size: 14px;
+  color: var(--rs-text);
+  transition: var(--rs-transition);
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.field-input::placeholder {
+  color: #2B2B2B;
+  opacity: 0.42;
+  font-weight: 400;
+}
+
+[data-theme="dark"] .field-input::placeholder {
+  color: #e8d8dc;
+  opacity: 0.42;
+}
+
+.field-input:focus {
+  outline: none;
+  border-color: var(--rs-border-focus);
+  box-shadow: 0 0 0 3px rgba(200,76,106,0.13);
+  background: var(--rs-bg-input);
+}
+
+.field-input:hover:not(:focus) {
+  border-color: var(--rs-petal);
+}
+
+.field-input.is-error {
+  border-color: #e63946;
+  box-shadow: 0 0 0 3px rgba(230,57,70,0.10);
+}
+
+.field-input.is-valid {
+  border-color: var(--rs-green);
+}
+
+.field-error {
+  display: none;
+  font-size: 11.5px;
+  color: #e63946;
+  margin-top: 4px;
+  align-items: center;
+  gap: 4px;
+}
+
+.field-error:not(:empty) { display: flex; }
+.field-input.is-error ~ .field-error { display: flex; }
+
+
+/* ============================================================
+   12. PASSWORD TOGGLE + STRENGTH
+   ============================================================ */
+.pw-toggle {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--rs-text-muted);
+  padding: 3px;
+  transition: color 0.2s;
+  display: flex;
+  align-items: center;
+}
+
+.pw-toggle:hover { color: var(--rs-primary); }
+.pw-toggle svg { width: 16px; height: 16px; }
+
+.field-input[type="password"] {
+  padding-right: 42px; /* room for eye icon */
+}
+
+/* Password strength bar */
+.pw-strength {
+  height: 3px;
+  background: var(--rs-border);
+  border-radius: 2px;
+  margin-top: 6px;
+  overflow: hidden;
+}
+
+.pw-strength-bar {
+  height: 100%;
+  width: 0%;
+  border-radius: 2px;
+  transition: width 0.4s ease, background 0.4s ease;
+}
+
+.pw-strength-bar.weak   { background: #e63946; }
+.pw-strength-bar.fair   { background: var(--rs-gold); }
+.pw-strength-bar.good   { background: #60a5fa; }
+.pw-strength-bar.strong { background: var(--rs-green); }
+
+.pw-strength-label {
+  font-size: 11px;
+  color: var(--rs-text-muted);
+  margin-top: 3px;
+  display: block;
+}
+
+
+/* ============================================================
+   13. REMEMBER ME / CHECKBOX
+   ============================================================ */
+.remember-row {
+  margin-bottom: clamp(14px, 2vh, 18px);
+}
+
+.check-label {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  cursor: pointer;
+  font-size: 13px;
+  color: var(--rs-text);
+  line-height: 1.4;
+  user-select: none;
+}
+
+.check-label input[type="checkbox"] {
+  /* Hide native, use custom */
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.check-custom {
+  width: 17px;
+  height: 17px;
+  flex-shrink: 0;
+  border: 1.5px solid var(--rs-border-input);
+  border-radius: 4px;
+  background: var(--rs-bg-input);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--rs-transition);
+  position: relative;
+}
+
+.check-custom::after {
+  content: '';
+  position: absolute;
+  width: 5px;
+  height: 8px;
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  transform: rotate(45deg) scale(0) translateY(-1px);
+  transition: transform 0.18s ease;
+}
+
+.check-label input:checked ~ .check-custom {
+  background: var(--rs-primary);
+  border-color: var(--rs-primary);
+}
+
+.check-label input:checked ~ .check-custom::after {
+  transform: rotate(45deg) scale(1) translateY(-1px);
+}
+
+.check-label:hover .check-custom {
+  border-color: var(--rs-primary);
+}
+
+.inline-link {
+  color: var(--rs-primary);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.inline-link:hover {
+  color: var(--rs-primary-dark);
+}
+
+
+/* ============================================================
+   14. SUBMIT BUTTON
+   ============================================================ */
+.auth-submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 12.5px 20px;
+  background: var(--rs-grad-rose);
+  color: #FFFFFF;
+  border: none;
+  border-radius: var(--rs-radius-pill);
+  font-family: var(--rs-font-body);
+  font-size: 14.5px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+  transition: var(--rs-transition-spring);
+  box-shadow: 0 4px 20px rgba(200,76,106,0.35);
+  margin-bottom: clamp(14px, 2vh, 20px);
+  position: relative;
+  overflow: hidden;
+}
+
+.auth-submit::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,0.12);
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.auth-submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(200,76,106,0.45);
+}
+
+.auth-submit:hover::before { opacity: 1; }
+.auth-submit:active { transform: scale(0.98); }
+
+.auth-submit svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  transition: transform 0.25s ease;
+}
+
+.auth-submit:hover svg { transform: translateX(4px); }
+
+.auth-submit:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+
+/* ============================================================
+   15. AUTH SWITCH
+   ============================================================ */
+.auth-switch {
+  text-align: center;
+  font-size: 13px;
+  color: var(--rs-text-muted);
+  line-height: 1.5;
+}
+
+.auth-switch-link {
+  font-weight: 600;
+  color: var(--rs-primary);
+  margin-left: 4px;
+  transition: var(--rs-transition);
+}
+
+.auth-switch-link:hover {
+  color: var(--rs-primary-dark);
+  text-decoration: underline;
+}
+
+
+/* ============================================================
+   16. CORNER CONTROLS (theme + RTL)
+   ============================================================ */
+.corner-controls {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  display: flex;
+  gap: 8px;
+  z-index: 100;
+}
+
+.ctrl-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--rs-radius-sm);
+  background: var(--rs-bg-card);
+  border: 1.5px solid var(--rs-border);
+  color: var(--rs-text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--rs-transition);
+  box-shadow: var(--rs-shadow-sm);
+}
+
+.ctrl-btn:hover {
+  background: var(--rs-primary-light);
+  border-color: var(--rs-primary);
+  color: var(--rs-primary);
+}
+
+[data-theme="dark"] .ctrl-btn {
+  background: var(--rs-bg-card);
+  border-color: var(--rs-border);
+}
+
+.ctrl-btn svg { width: 17px; height: 17px; }
+.ctrl-btn {
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  min-height: 36px;
+  padding: 0;
+  box-sizing: border-box;
+}
+.rtl-toggle-btn {
+  background: #FFFFFF !important;
+  border-color: #E5E7EB !important;
+  color: #111827 !important;
+}
+
+.rtl-toggle-btn:hover {
+  background: var(--rs-primary-light) !important;
+  border-color: var(--rs-primary) !important;
+  color: var(--rs-primary) !important;
+}
+[data-theme="dark"] .rtl-toggle-btn {
+  background: var(--rs-bg-card) !important;
+  border-color: var(--rs-border) !important;
+  color: var(--rs-text) !important;
+}
+
+/* ============================================================
+   17. ROSE SVG ANIMATION
+   All animations are CSS-only — performant, no JS required.
+   ============================================================ */
+
+/* Stem sway */
+.stem-group { transform-origin: 160px 390px; animation: stemSway 5s ease-in-out infinite; }
+.stem       { transform-origin: 160px 390px; animation: stemSway 5s ease-in-out infinite; }
+
+@keyframes stemSway {
+  0%,100% { transform: rotate(0deg); }
+  30%     { transform: rotate(1.2deg); }
+  70%     { transform: rotate(-1deg); }
+}
+
+/* Leaf flutter */
+.leaf-l { transform-origin: 158px 345px; animation: leafFlutterL 4.5s ease-in-out infinite; }
+.leaf-r { transform-origin: 157px 368px; animation: leafFlutterR 5.5s ease-in-out infinite 0.8s; }
+
+@keyframes leafFlutterL {
+  0%,100% { transform: rotate(0deg) scaleX(1); }
+  40%     { transform: rotate(-4deg) scaleX(1.04); }
+  70%     { transform: rotate(2deg) scaleX(0.98); }
+}
+
+@keyframes leafFlutterR {
+  0%,100% { transform: rotate(0deg) scaleX(1); }
+  40%     { transform: rotate(3deg) scaleX(1.03); }
+  70%     { transform: rotate(-2deg) scaleX(0.97); }
+}
+
+/* FIXED — rotate around actual SVG center */
+.petal-outer,
+.petal-mid,
+.petal-inner,
+.petal-heart,
+.rose-centre,
+.stamen-dots {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+/* Falling petal particles */
+.fp { animation: particleFall linear infinite; }
+.fp1 { animation-duration: 7.2s; animation-delay: 0s;    transform-origin: 80px  60px;  }
+.fp2 { animation-duration: 8.8s; animation-delay: 1.4s;  transform-origin: 240px 30px;  }
+.fp3 { animation-duration: 6.5s; animation-delay: 2.8s;  transform-origin: 50px  130px; }
+.fp4 { animation-duration: 9.1s; animation-delay: 0.6s;  transform-origin: 270px 110px; }
+.fp5 { animation-duration: 7.8s; animation-delay: 3.5s;  transform-origin: 30px  200px; }
+.fp6 { animation-duration: 8.3s; animation-delay: 1.9s;  transform-origin: 290px 170px; }
+.fp7 { animation-duration: 6.9s; animation-delay: 4.2s;  transform-origin: 100px 330px; }
+.fp8 { animation-duration: 7.5s; animation-delay: 2.1s;  transform-origin: 220px 360px; }
+.fp9 { animation-duration: 8.0s; animation-delay: 0.9s;  transform-origin: 160px 30px;  }
+
+@keyframes particleFall {
+  0%   { transform: translateY(-30px) rotate(0deg);   opacity: 0;   }
+  10%  { opacity: 0.8; }
+  85%  { opacity: 0.7; }
+  100% { transform: translateY(430px) rotate(360deg); opacity: 0; }
+}
+
+/* Sparkle stars — twinkle */
+.sp { animation: twinkle ease-in-out infinite; }
+.sp1 { animation-duration: 3.2s; animation-delay: 0s;   }
+.sp2 { animation-duration: 4.1s; animation-delay: 1.5s; }
+.sp3 { animation-duration: 2.8s; animation-delay: 2.2s; }
+.sp4 { animation-duration: 3.7s; animation-delay: 0.8s; }
+.sp5 { animation-duration: 3.0s; animation-delay: 1.8s; }
+
+@keyframes twinkle {
+  0%,100% { opacity: 0.1; transform: scale(0.6) rotate(0deg);  }
+  40%     { opacity: 0.9; transform: scale(1.2) rotate(15deg); }
+  70%     { opacity: 0.5; transform: scale(0.9) rotate(-5deg); }
+}
+
+/* Register page — slightly different rose position */
+.rose-scene-reg {
+  margin-top: -10px;
+}
+
+
+/* ============================================================
+   18. RESPONSIVE
+   ============================================================ */
+
+/* Tablet — show form full width, hide decorative panel */
+@media (max-width: 900px) {
+  .auth-page {
+    grid-template-columns: 1fr;
+  }
+
+  .auth-panel-left {
+    display: none; /* Hide decorative panel on mobile */
+  }
+
+  .auth-panel-right {
+    height: 100vh;
+    overflow-y: auto;
+    padding: 20px 16px;
+    align-items: flex-start;
+    padding-top: clamp(40px, 8vh, 80px);
+  }
+
+  body, html {
+    overflow: auto; /* Allow scroll if needed on very small screens */
+  }
+
+  .auth-card {
+    max-width: 100%;
+    border-radius: var(--rs-radius-lg);
+    box-shadow: none;
+    border: none;
+    background: transparent;
+    padding: 0;
+  }
+
+  /* Re-show a subtle rose on mobile — top left corner decoration */
+  .auth-panel-right::before {
+    content: '';
+    position: fixed;
+    top: -60px;
+    right: -60px;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(200,76,106,0.12) 0%, transparent 70%);
+    pointer-events: none;
+    border-radius: 50%;
+  }
+}
+
+@media (max-width: 480px) {
+  .corner-controls { top: 10px; right: 10px; }
+
+  .auth-card {
+    padding: 0;
+  }
+
+  .field-row-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .social-auth-row {
+    flex-direction: column;
+  }
+
+  .social-btn-half {
+    flex: initial;
+    width: 100%;
+  }
+
+  .auth-panel-right {
+    padding-top: 52px;
+  }
+}
+
+/* ============================================================
+   END OF LOGIN.CSS
+   ============================================================ */
+.auth-header {
+  text-align: center;
+  margin-top: 10px;
+}
+
+
+
+.auth-title {
+  text-align: center;
+}
+
+.auth-subtitle {
+  text-align: center;
+}
+.auth-logo img {
+  display: block;
+  margin: 0 auto;
+}
+.auth-logo {
+  display: block;          /* 🔥 change from inline-block */
+  margin: 0 auto 10px;     /* 🔥 auto centers horizontally */
+  text-align: center;
+  width: fit-content;
+}
+.remember-row {
+  display: flex;
+  justify-content: space-between; /* 🔥 pushes apart */
+  align-items: center;
+  margin-bottom: clamp(14px, 2vh, 18px);
+}
+
+.forgot-inline {
+  font-size: 12px;
+  white-space: nowrap;
+}.navbar-logo {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

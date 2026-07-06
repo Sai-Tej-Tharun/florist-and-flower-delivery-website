@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <!-- ============================================================
+       ROSE & STEM — Login Page
+       Viewport-locked · No navbar/footer · Logo links to home
+       ============================================================ -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Sign in to Rose & Stem — manage your orders, saved occasions, and flower subscriptions." />
+  <title>Sign In — Rose & Stem</title>
+  <link rel="icon" href="../global-images/favicon.svg" type="image/x-icon" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&family=Great+Vibes&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="login.css" />
+  <link rel="stylesheet" href="../global-css/global.css" />
+</head>
+
+<body>
+  <!-- Skip link -->
+  <a href="#login-form" class="skip-link">Skip to sign-in form</a>
+
+  <!-- Theme + RTL toggles — top right corner -->
+  <div class="corner-controls" aria-label="Page controls">
+    <button class="ctrl-btn theme-toggle-btn" id="themeToggle" aria-label="Toggle dark/light mode" title="Toggle theme">
+      <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" style="display:none"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+    </button>
+<button class="ctrl-btn rtl-toggle rtl-toggle-btn" id="rtlToggle" aria-label="Toggle RTL">
+  <span class="rtl-text">RTL</span>
+</button>
+  </div>
+
+  <!-- ============================================================
+       PAGE WRAPPER — two panels
+       ============================================================ -->
+  <div class="auth-page">
+
+    <!-- ── LEFT PANEL: Decorative rose animation ── -->
+    <div class="auth-panel-left" aria-hidden="true">
+      <!-- Ambient blobs -->
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="blob blob-3"></div>
+
+      <!-- SVG Rose animation -->
+      <div class="rose-scene">
+        <svg class="rose-svg" viewBox="0 0 320 400" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+
+          <!-- ── Stem ── -->
+          <g class="stem-group">
+            <path class="stem" d="M160 310 C158 330 154 355 156 390" stroke="#5E8B7E" stroke-width="5" stroke-linecap="round" fill="none"/>
+            <!-- Leaf left -->
+            <path class="leaf leaf-l" d="M158 345 C142 336 130 340 134 352 C140 348 156 346 158 345Z" fill="#5E8B7E"/>
+            <!-- Leaf right -->
+            <path class="leaf leaf-r" d="M157 368 C173 358 185 363 181 375 C175 370 158 369 157 368Z" fill="#4a7066"/>
+          </g>
+
+          <!-- ── Outer guard petals ── -->
+          <g class="petal-group petal-outer" transform="translate(160,200)">
+            <ellipse class="petal" cx="0" cy="-78" rx="22" ry="50" fill="#9E2B45" opacity="0.88" transform="rotate(0)"/>
+            <ellipse class="petal" cx="0" cy="-78" rx="22" ry="50" fill="#A83050" opacity="0.85" transform="rotate(45)"/>
+            <ellipse class="petal" cx="0" cy="-78" rx="22" ry="50" fill="#9E2B45" opacity="0.88" transform="rotate(90)"/>
+            <ellipse class="petal" cx="0" cy="-78" rx="22" ry="50" fill="#A83050" opacity="0.85" transform="rotate(135)"/>
+            <ellipse class="petal" cx="0" cy="-78" rx="22" ry="50" fill="#9E2B45" opacity="0.88" transform="rotate(180)"/>
+            <ellipse class="petal" cx="0" cy="-78" rx="22" ry="50" fill="#A83050" opacity="0.85" transform="rotate(225)"/>
+            <ellipse class="petal" cx="0" cy="-78" rx="22" ry="50" fill="#9E2B45" opacity="0.88" transform="rotate(270)"/>
+            <ellipse class="petal" cx="0" cy="-78" rx="22" ry="50" fill="#A83050" opacity="0.85" transform="rotate(315)"/>
+          </g>
+
+          <!-- ── Mid petals ── -->
+          <g class="petal-group petal-mid" transform="translate(160,200)">
+            <ellipse class="petal" cx="0" cy="-62" rx="19" ry="42" fill="#C84C6A" opacity="0.90" transform="rotate(22.5)"/>
+            <ellipse class="petal" cx="0" cy="-62" rx="19" ry="42" fill="#C84C6A" opacity="0.90" transform="rotate(67.5)"/>
+            <ellipse class="petal" cx="0" cy="-62" rx="19" ry="42" fill="#C84C6A" opacity="0.90" transform="rotate(112.5)"/>
+            <ellipse class="petal" cx="0" cy="-62" rx="19" ry="42" fill="#C84C6A" opacity="0.90" transform="rotate(157.5)"/>
+            <ellipse class="petal" cx="0" cy="-62" rx="19" ry="42" fill="#C84C6A" opacity="0.90" transform="rotate(202.5)"/>
+            <ellipse class="petal" cx="0" cy="-62" rx="19" ry="42" fill="#C84C6A" opacity="0.90" transform="rotate(247.5)"/>
+            <ellipse class="petal" cx="0" cy="-62" rx="19" ry="42" fill="#C84C6A" opacity="0.90" transform="rotate(292.5)"/>
+            <ellipse class="petal" cx="0" cy="-62" rx="19" ry="42" fill="#C84C6A" opacity="0.90" transform="rotate(337.5)"/>
+          </g>
+
+          <!-- ── Inner blush petals ── -->
+          <g class="petal-group petal-inner" transform="translate(160,200)">
+            <ellipse class="petal" cx="0" cy="-44" rx="15" ry="32" fill="#EFA3B1" opacity="0.92" transform="rotate(0)"/>
+            <ellipse class="petal" cx="0" cy="-44" rx="15" ry="32" fill="#EFA3B1" opacity="0.92" transform="rotate(60)"/>
+            <ellipse class="petal" cx="0" cy="-44" rx="15" ry="32" fill="#F2B5C0" opacity="0.88" transform="rotate(120)"/>
+            <ellipse class="petal" cx="0" cy="-44" rx="15" ry="32" fill="#EFA3B1" opacity="0.92" transform="rotate(180)"/>
+            <ellipse class="petal" cx="0" cy="-44" rx="15" ry="32" fill="#EFA3B1" opacity="0.92" transform="rotate(240)"/>
+            <ellipse class="petal" cx="0" cy="-44" rx="15" ry="32" fill="#F2B5C0" opacity="0.88" transform="rotate(300)"/>
+          </g>
+
+          <!-- ── Heart petals ── -->
+          <g class="petal-group petal-heart" transform="translate(160,200)">
+            <ellipse cx="0" cy="-26" rx="11" ry="20" fill="#F7D6DC" opacity="0.90" transform="rotate(30)"/>
+            <ellipse cx="0" cy="-26" rx="11" ry="20" fill="#F7D6DC" opacity="0.90" transform="rotate(90)"/>
+            <ellipse cx="0" cy="-26" rx="11" ry="20" fill="#FAE0E6" opacity="0.88" transform="rotate(150)"/>
+            <ellipse cx="0" cy="-26" rx="11" ry="20" fill="#F7D6DC" opacity="0.90" transform="rotate(210)"/>
+            <ellipse cx="0" cy="-26" rx="11" ry="20" fill="#F7D6DC" opacity="0.90" transform="rotate(270)"/>
+            <ellipse cx="0" cy="-26" rx="11" ry="20" fill="#FAE0E6" opacity="0.88" transform="rotate(330)"/>
+          </g>
+
+          <!-- ── Centre dome ── -->
+          <circle class="rose-centre" cx="160" cy="200" r="18" fill="#E6C07B" opacity="0.95"/>
+          <circle cx="160" cy="200" r="9" fill="#C84C6A"/>
+          <!-- Stamen dots -->
+          <g class="stamen-dots" transform="translate(160,200)">
+            <circle cx="12"  cy="-8"  r="3" fill="#E6C07B" opacity="0.9"/>
+            <circle cx="-12" cy="-8"  r="3" fill="#E6C07B" opacity="0.9"/>
+            <circle cx="0"   cy="-15" r="3" fill="#E6C07B" opacity="0.9"/>
+            <circle cx="10"  cy="10"  r="2.5" fill="#E6C07B" opacity="0.8"/>
+            <circle cx="-10" cy="10"  r="2.5" fill="#E6C07B" opacity="0.8"/>
+            <circle cx="0"   cy="14"  r="2.5" fill="#E6C07B" opacity="0.8"/>
+          </g>
+
+          <!-- ── Falling petal particles (CSS-animated) ── -->
+          <g class="particles">
+            <ellipse class="fp fp1" cx="80"  cy="60"  rx="7" ry="4" fill="#EFA3B1" opacity="0.7" transform="rotate(20,80,60)"/>
+            <ellipse class="fp fp2" cx="240" cy="30"  rx="6" ry="3.5" fill="#C84C6A" opacity="0.65" transform="rotate(-15,240,30)"/>
+            <ellipse class="fp fp3" cx="50"  cy="130" rx="5" ry="3"   fill="#F7D6DC" opacity="0.72" transform="rotate(35,50,130)"/>
+            <ellipse class="fp fp4" cx="270" cy="110" rx="8" ry="4.5" fill="#EFA3B1" opacity="0.68" transform="rotate(-25,270,110)"/>
+            <ellipse class="fp fp5" cx="30"  cy="200" rx="5" ry="3"   fill="#D97A8C" opacity="0.60" transform="rotate(10,30,200)"/>
+            <ellipse class="fp fp6" cx="290" cy="170" rx="6" ry="3.5" fill="#F7D6DC" opacity="0.70" transform="rotate(-30,290,170)"/>
+            <ellipse class="fp fp7" cx="100" cy="330" rx="5" ry="3"   fill="#EFA3B1" opacity="0.65" transform="rotate(15,100,330)"/>
+            <ellipse class="fp fp8" cx="220" cy="360" rx="7" ry="4"   fill="#C84C6A" opacity="0.60" transform="rotate(-20,220,360)"/>
+          </g>
+
+          <!-- ── Sparkle stars ── -->
+          <g class="sparkles">
+            <path class="sp sp1" d="M55 80 L57 74 L59 80 L65 82 L59 84 L57 90 L55 84 L49 82 Z" fill="#E6C07B" opacity="0.8"/>
+            <path class="sp sp2" d="M255 140 L257 135 L259 140 L264 142 L259 144 L257 149 L255 144 L250 142 Z" fill="#E6C07B" opacity="0.75"/>
+            <path class="sp sp3" d="M40 260 L41.5 256 L43 260 L47 261 L43 262 L41.5 266 L40 262 L36 261 Z" fill="#fff" opacity="0.6"/>
+            <path class="sp sp4" d="M275 290 L276.5 286 L278 290 L282 291 L278 292 L276.5 296 L275 292 L271 291 Z" fill="#E6C07B" opacity="0.7"/>
+          </g>
+        </svg>
+      </div>
+
+      <!-- Brand tagline on the left panel -->
+      <div class="panel-tagline">
+        <span class="tagline-script">Rose &amp; Stem</span>
+        <p>Send love, one bouquet at a time.</p>
+      </div>
+    </div>
+
+    <!-- ── RIGHT PANEL: Login Card ── -->
+    <div class="auth-panel-right">
+      <div class="auth-card" role="main">
+
+        <!-- Logo — links to home, no back-to-site text -->
+<a href="../home-1/home.html" class="navbar-logo">
+
+  <img src="../global-images/logo-pink.svg"
+       class="logo-light"
+       alt="Rose & Stem">
+
+  <img src="../global-images/logo-white.svg"
+       class="logo-dark"
+       alt="Rose & Stem">
+
+</a>
+
+        <div class="auth-header">
+          <h1 class="auth-title">Welcome back</h1>
+          <p class="auth-subtitle">Sign in to your Rose &amp; Stem account</p>
+        </div>
+
+        <!-- ── Social sign-in ── -->
+        <div class="social-auth" aria-label="Social sign-in options">
+
+          <!-- Google -->
+          <button class="social-btn social-btn-google" type="button" aria-label="Sign in with Google">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+              <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+              <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+              <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+            </svg>
+            <span>Continue with Google</span>
+          </button>
+
+          <!-- Apple -->
+          <button class="social-btn social-btn-apple" type="button" aria-label="Sign in with Apple">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+              <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+            </svg>
+            <span>Continue with Apple</span>
+          </button>
+
+        </div>
+
+        <!-- Divider -->
+        <div class="auth-divider" aria-hidden="true">
+          <span>or sign in with email</span>
+        </div>
+
+        <!-- ── Login Form ── -->
+        <form id="login-form" class="auth-form" novalidate aria-label="Email sign-in form">
+
+          <!-- Email -->
+          <div class="field-group">
+            <label class="field-label" for="login-email">Email Address</label>
+            <div class="field-wrap">
+              <svg class="field-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <input
+                type="email"
+                id="login-email"
+                name="email"
+                class="field-input"
+                placeholder="priya@example.com"
+                required
+                autocomplete="email"
+                aria-required="true"
+                aria-describedby="email-err"
+              />
+            </div>
+            <span class="field-error" id="email-err" role="alert"></span>
+          </div>
+
+          <!-- Password -->
+          <div class="field-group">
+
+            <div class="field-wrap">
+              <svg class="field-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              <input
+                type="password"
+                id="login-password"
+                name="password"
+                class="field-input"
+                placeholder="••••••••"
+                required
+                minlength="6"
+                autocomplete="current-password"
+                aria-required="true"
+                aria-describedby="pw-err"
+              />
+              <button type="button" class="pw-toggle" aria-label="Show password" id="togglePw">
+                <svg class="eye-open" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+                <svg class="eye-closed" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" style="display:none"><path d="M9.88 9.88a3 3 0 1 0 4.24 4.24"/><path d="M10.73 5.08A10.43 10.43 0 0 1 12 5c7 0 10 7 10 7a13.16 13.16 0 0 1-1.67 2.68"/><path d="M6.61 6.61A13.526 13.526 0 0 0 2 12s3 7 10 7a9.74 9.74 0 0 0 5.39-1.61"/><line x1="2" y1="2" x2="22" y2="22"/></svg>
+              </button>
+            </div>
+            <span class="field-error" id="pw-err" role="alert"></span>
+          </div>
+
+          <!-- Remember me -->
+<div class="remember-row">
+  <label class="check-label" for="remember">
+    <input type="checkbox" id="remember" name="remember" />
+    <span class="check-custom"></span>
+    Remember me
+  </label>
+
+  <a href="#" class="forgot-link forgot-inline">Forgot password?</a>
+</div>
+
+          <!-- Submit -->
+          <button type="submit" class="auth-submit" aria-label="Sign in to your account">
+            Sign In
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </button>
+
+        </form>
+
+        <!-- Switch to register -->
+        <p class="auth-switch">
+          Don't have an account?
+          <a href="register.html" class="auth-switch-link" aria-label="Create a new account">Create one free</a>
+        </p>
+
+      </div>
+    </div>
+
+  </div><!-- /.auth-page -->
+
+  <script src="login.js"></script>
+</body>
+</html>

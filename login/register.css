@@ -1,0 +1,134 @@
+/* ============================================================
+   ROSE & STEM — Register Page CSS Overrides
+   login/register.css  (imported after login.css on register.html)
+   ============================================================ */
+
+/*
+   Register layout is flipped:
+   Form panel is LEFT, decoration panel is RIGHT.
+   Achieved via order property — no HTML change needed.
+*/
+
+.auth-page-register {
+  /* Keep the grid but the DOM already has form-left, deco-right */
+  
+}
+
+
+/* The form panel gets order 1 (left) */
+.auth-page-register .auth-panel-form {
+  order: 1;
+}
+
+/* The deco panel gets order 2 (right) */
+.auth-page-register .auth-panel-deco {
+  order: 2;
+}
+
+/*
+   Register card is slightly more compact to fit all fields
+   without any scroll. Uses a tighter gap and smaller padding.
+*/
+.auth-card-register {
+  max-width: 440px;
+  padding: clamp(22px, 3vh, 36px) clamp(22px, 3vw, 36px);
+  gap: 0;
+}
+
+.auth-card-register .auth-header {
+  margin-bottom: clamp(12px, 1.8vh, 18px);
+}
+
+.auth-card-register .auth-title {
+  font-size: clamp(20px, 2.2vw, 27px);
+}
+
+.auth-card-register .social-auth {
+  margin-bottom: clamp(10px, 1.5vh, 16px);
+}
+
+.auth-card-register .auth-divider {
+  margin-bottom: clamp(10px, 1.5vh, 16px);
+}
+
+.auth-card-register .field-group {
+  margin-bottom: clamp(10px, 1.5vh, 14px);
+}
+
+.auth-card-register .field-row-2 {
+  margin-bottom: clamp(10px, 1.5vh, 14px);
+  gap: 10px;
+}
+
+.auth-card-register .field-row-2 .field-group {
+  margin-bottom: 0;
+}
+
+.auth-card-register .field-input {
+  padding-top: 9px;
+  padding-bottom: 9px;
+  font-size: 13.5px;
+}
+
+.auth-card-register .pw-strength {
+  margin-top: 5px;
+}
+
+.auth-card-register .remember-row {
+  margin-bottom: clamp(10px, 1.5vh, 14px);
+}
+
+.auth-card-register .auth-submit {
+  padding: 11.5px 20px;
+  font-size: 14px;
+  margin-bottom: clamp(12px, 1.8vh, 16px);
+}
+
+/* Register deco panel — use green-accented gradient for "fresh start" feel */
+/* .auth-panel-deco {
+  background: linear-gradient(145deg, #1a3530 0%, #2d6b5e 35%, #5E8B7E 65%, #A7C4BC 100%);
+} */
+
+.auth-panel-deco .tagline-script {
+  font-size: clamp(26px, 3vw, 40px);
+}
+
+/* On register mobile, show deco panel below the form or hide */
+@media (max-width: 900px) {
+  .auth-page-register .auth-panel-deco {
+    display: none;
+  }
+
+  .auth-page-register .auth-panel-form {
+    order: 1;
+    height: 100vh;
+  }
+}
+
+/* ============================================================
+   END OF REGISTER.CSS
+   ============================================================ */
+.auth-header {
+  text-align: center;
+  margin-top: 10px;
+}
+
+
+
+.auth-title {
+  text-align: center;
+}
+
+.auth-subtitle {
+  text-align: center;
+}
+.auth-logo img {
+  display: block;
+  margin: 0 auto;
+}
+.auth-logo {
+  display: block;          /* 🔥 change from inline-block */
+  margin: 0 auto 10px;     /* 🔥 auto centers horizontally */
+  text-align: center;
+  width: fit-content;
+}

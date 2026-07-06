@@ -1,0 +1,1512 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <!-- ============================================================
+       ROSE & STEM — Home Page 2 (Subscription / Reminder-Based)
+       Goal: Sell recurring flower delivery plans & save special dates
+       ============================================================ -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO Meta -->
+  <title>Rose & Stem — Never Miss a Special Moment | Flower Subscription & Reminders</title>
+  <meta name="description" content="Set it once, delight forever. Rose & Stem's smart subscription plans send fresh handcrafted bouquets for every anniversary, birthday, and special occasion — automatically." />
+  <meta name="keywords" content="flower subscription, recurring flower delivery, anniversary flowers, birthday reminder, flower gifting plan, Rose and Stem" />
+  <meta name="author" content="Rose & Stem" />
+
+  <!-- OpenGraph -->
+  <meta property="og:title" content="Rose & Stem — Never Miss a Special Moment" />
+  <meta property="og:description" content="Smart flower subscriptions with personalized date reminders. Fresh bouquets delivered automatically for every special occasion." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="../global-images/og-home2.jpg" />
+  <meta property="og:url" content="https://roseandstemon.com/home-2/" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="../global-images/favicon.svg" type="image/x-icon" />
+
+  <!-- Google Fonts: Playfair Display + Inter + Great Vibes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Inter:wght@300;400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet" />
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+
+  <!-- Global CSS -->
+   
+  <link rel="stylesheet" href="../global-css/global.css" />
+
+  <!-- Page CSS -->
+  <link rel="stylesheet" href="home.css" />
+</head>
+
+<body class="has-navbar">
+
+  <!-- Skip to main content (accessibility) -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+
+
+  <!-- ============================================================
+       NAVBAR PLACEHOLDER — loaded dynamically via global.js
+       ============================================================ -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+  <div class="navbar-inner">
+
+    <!-- Logo -->
+<a href="../home-1/home.html" class="navbar-logo">
+
+  <img src="../global-images/logo-pink.svg"
+       class="logo-light"
+       alt="Rose & Stem">
+
+  <img src="../global-images/logo-white.svg"
+       class="logo-dark"
+       alt="Rose & Stem">
+
+</a>
+
+    <!-- Desktop Nav -->
+    <ul class="navbar-nav" role="menubar" aria-label="Primary navigation">
+
+      <!-- Home dropdown -->
+<!-- Home dropdown -->
+<li class="nav-item has-dropdown" role="none">
+  <a href="../home-1/home.html" class="nav-link" role="menuitem" aria-haspopup="true" aria-expanded="false">
+    Home
+    <svg class="chevron" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+      <polyline points="6 9 12 15 18 9"/>
+    </svg>
+  </a>
+
+  <ul class="dropdown-menu" role="menu" aria-label="Home pages">
+    <li role="none">
+      <a href="../home-1/home.html" class="dropdown-item" role="menuitem">
+        Home — General Landing
+      </a>
+    </li>
+
+    <li role="none">
+      <a href="../home-2/home.html" class="dropdown-item" role="menuitem">
+        Home — Subscription &amp; Reminders
+      </a>
+    </li>
+  </ul>
+</li>
+
+      <li class="nav-item" role="none"><a href="../about/about.html" class="nav-link" role="menuitem">About</a></li>
+      <li class="nav-item" role="none"><a href="../services/services.html" class="nav-link" role="menuitem">Services</a></li>
+      <li class="nav-item" role="none"><a href="../pricing/pricing.html" class="nav-link" role="menuitem">Pricing</a></li>
+      <li class="nav-item" role="none"><a href="../blogs/blogs.html" class="nav-link" role="menuitem">Blog</a></li>
+      <li class="nav-item" role="none"><a href="../contact/contact.html" class="nav-link" role="menuitem">Contact</a></li>
+      <li class="nav-item" role="none"><a href="../admin-dashboard/dashboard.html" class="nav-link" role="menuitem">Dashboard</a></li>
+
+    </ul>
+
+    <!-- Right Controls -->
+<!-- Center Buttons -->
+<div class="navbar-center-actions">
+
+  <a href="../contact/contact.html"
+     class="btn btn-secondary btn-sm ns-desktop-only"
+     aria-label="Get a quote">
+    Get a Quote
+  </a>
+
+  <a href="../login/login.html"
+     class="btn btn-primary btn-sm ns-desktop-only"
+     aria-label="Log in to your account">
+    Login
+  </a>
+
+</div>
+
+<!-- Right Controls -->
+<div class="navbar-controls">
+
+  <button class="theme-toggle ns-desktop-only"
+          aria-label="Toggle dark/light mode"
+          title="Toggle theme">
+
+    <svg class="icon-moon"
+         xmlns="http://www.w3.org/2000/svg"
+         width="18"
+         height="18"
+         viewBox="0 0 24 24"
+         fill="none"
+         stroke="currentColor"
+         stroke-width="2">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+    </svg>
+
+    <svg class="icon-sun"
+         xmlns="http://www.w3.org/2000/svg"
+         width="18"
+         height="18"
+         viewBox="0 0 24 24"
+         fill="none"
+         stroke="currentColor"
+         stroke-width="2"
+         style="display:none">
+      <circle cx="12" cy="12" r="5"/>
+      <line x1="12" y1="1" x2="12" y2="3"/>
+      <line x1="12" y1="21" x2="12" y2="23"/>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+      <line x1="1" y1="12" x2="3" y2="12"/>
+      <line x1="21" y1="12" x2="23" y2="12"/>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+    </svg>
+
+  </button>
+
+  <button class="rtl-toggle ns-desktop-only"
+          aria-label="Toggle RTL"
+          title="Toggle RTL">
+    <span class="rtl-text">RTL</span>
+  </button>
+
+  <!-- Mobile Hamburger -->
+  <button class="navbar-toggle"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          style="display:flex;flex-direction:column;justify-content:center;align-items:center;gap:5px;width:40px;height:40px;padding:8px;cursor:pointer;background:transparent;border:1.5px solid var(--border-color,#E9E4E1);border-radius:8px;flex-shrink:0;">
+
+    <span style="display:block;width:18px;height:2px;background:var(--text-body,#2B2B2B);border-radius:2px;transition:all .3s ease;"></span>
+    <span style="display:block;width:18px;height:2px;background:var(--text-body,#2B2B2B);border-radius:2px;transition:all .3s ease;"></span>
+    <span style="display:block;width:18px;height:2px;background:var(--text-body,#2B2B2B);border-radius:2px;transition:all .3s ease;"></span>
+
+  </button>
+
+</div>
+
+  </div>
+</nav>
+
+<!-- Mobile Menu Overlay -->
+<div id="mobile-menu" class="mobile-menu" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+
+  <!-- Flat links — no sub-dropdowns -->
+  <a href="../home-1/home.html" class="mobile-nav-link">Home — General Landing</a>
+  <a href="../home-2/home.html" class="mobile-nav-link">Home — Subscription</a>
+  <a href="../about/about.html" class="mobile-nav-link">About</a>
+  <a href="../services/services.html" class="mobile-nav-link">Services</a>
+  <a href="../pricing/pricing.html" class="mobile-nav-link">Pricing</a>
+  <a href="../blogs/blogs.html" class="mobile-nav-link">Blog</a>
+  <a href="../contact/contact.html" class="mobile-nav-link">Contact</a>
+  <a href="../admin-dashboard/dashboard.html" class="mobile-nav-link">Dashboard</a>
+
+  <!-- Theme + RTL toggles inside mobile menu -->
+  <div class="mobile-menu-controls">
+    <button class="theme-toggle mobile-ctrl-btn" aria-label="Toggle dark mode">
+      <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" style="display:none"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/></svg>
+      <span>Toggle Theme</span>
+    </button>
+<button class="rtl-toggle mobile-ctrl-btn" aria-label="Toggle RTL">
+  <span class="rtl-text">RTL</span>
+</button>
+  </div>
+
+  <div class="mobile-menu-btns">
+    <a href="../contact/contact.html" class="btn btn-secondary btn-block">Get a Quote</a>
+    <a href="../login/login.html" class="btn btn-primary btn-block">Login</a>
+  </div>
+
+</div>
+
+  <!-- ============================================================
+       MAIN CONTENT
+       ============================================================ -->
+  <main id="main-content">
+
+    <!-- ============================================================
+         HERO SECTION
+         "Never Miss a Special Moment Again"
+         Subscription/reminder focused, premium feel
+         ============================================================ -->
+    <section class="hero-2 hero-viewport" aria-label="Hero — Subscription Flower Delivery">
+
+      <!-- Decorative background blobs -->
+      <div class="hero2-blob hero2-blob--1" aria-hidden="true"></div>
+      <div class="hero2-blob hero2-blob--2" aria-hidden="true"></div>
+      <div class="hero2-blob hero2-blob--3" aria-hidden="true"></div>
+
+      <!-- Floating petal decorations -->
+      <div class="hero2-petal hero2-petal--1" aria-hidden="true">🌹</div>
+      <div class="hero2-petal hero2-petal--2" aria-hidden="true">🌸</div>
+      <div class="hero2-petal hero2-petal--3" aria-hidden="true">💐</div>
+      <div class="hero2-petal hero2-petal--4" aria-hidden="true">🌺</div>
+
+      <div class="container hero2-container">
+        <!-- Left: Copy -->
+        <div class="hero2-copy animate-fade-in-up">
+          <span class="section-label">Smart Gifting Plans</span>
+
+          <h1 class="hero2-headline">
+            Never Miss a<br />
+            <em class="font-accent hero2-accent">Special Moment</em><br />
+            Again
+          </h1>
+
+          <p class="hero2-subtext">
+            Set the date once. We'll deliver fresh, handcrafted bouquets for every anniversary,
+            birthday, and celebration — automatically, with love.
+          </p>
+
+          <!-- Key benefits strip -->
+          <ul class="hero2-benefits" aria-label="Key benefits">
+            <li>
+              <span class="hero2-benefit-icon" aria-hidden="true">
+                <i data-lucide="calendar-check"></i>
+              </span>
+              Save important dates
+            </li>
+            <li>
+              <span class="hero2-benefit-icon" aria-hidden="true">
+                <i data-lucide="bell"></i>
+              </span>
+              Smart reminders
+            </li>
+            <li>
+              <span class="hero2-benefit-icon" aria-hidden="true">
+                <i data-lucide="repeat"></i>
+              </span>
+              Auto-delivery
+            </li>
+            <!-- <li>
+              <span class="hero2-benefit-icon" aria-hidden="true">
+                <i data-lucide="badge-percent"></i>
+              </span>
+              Subscriber discounts
+            </li> -->
+          </ul>
+
+          <!-- CTAs -->
+          <div class="hero2-ctas">
+            <a href="../pricing/pricing.html" class="btn btn-primary btn-lg" aria-label="Start your flower subscription plan">
+              <i data-lucide="sparkles" aria-hidden="true"></i>
+              Start Your Plan
+            </a>
+            <a href="#how-it-works" class="btn btn-secondary btn-lg" aria-label="See how it works">
+              <i data-lucide="play-circle" aria-hidden="true"></i>
+              See How It Works
+            </a>
+          </div>
+
+          <!-- Social proof -->
+          <div class="hero2-social-proof">
+            <div class="hero2-avatars" aria-label="Happy subscribers">
+              <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=40&h=40&fit=crop&crop=face" alt="Subscriber Priya" loading="lazy" width="40" height="40" />
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=40&h=40&fit=crop&crop=face" alt="Subscriber Arjun" loading="lazy" width="40" height="40" />
+              <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=40&h=40&fit=crop&crop=face" alt="Subscriber Meera" loading="lazy" width="40" height="40" />
+              <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=40&h=40&fit=crop&crop=face" alt="Subscriber Rohan" loading="lazy" width="40" height="40" />
+            </div>
+            <div class="hero2-proof-text">
+              <div class="hero2-stars" aria-label="5 out of 5 stars">
+                <i data-lucide="star" aria-hidden="true"></i>
+                <i data-lucide="star" aria-hidden="true"></i>
+                <i data-lucide="star" aria-hidden="true"></i>
+                <i data-lucide="star" aria-hidden="true"></i>
+                <i data-lucide="star" aria-hidden="true"></i>
+              </div>
+              <span><strong>12,400+</strong> happy subscribers</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Interactive Reminder Builder Card -->
+        <div class="hero2-card animate-fade-in-right delay-200" aria-label="Reminder builder preview">
+          <div class="reminder-card">
+            <div class="reminder-card__header">
+              <div class="reminder-card__icon" aria-hidden="true">
+                <i data-lucide="heart"></i>
+              </div>
+              <div>
+                <p class="reminder-card__title">Upcoming Reminder</p>
+                <p class="reminder-card__sub">Auto-delivery scheduled</p>
+              </div>
+              <span class="badge badge-rose">Active</span>
+            </div>
+
+            <!-- Occasion display -->
+            <div class="reminder-card__occasion">
+              <img
+                src="https://images.unsplash.com/photo-1519378058457-4c29a0a2efac?w=320&h=200&fit=crop"
+                alt="Romantic rose bouquet for anniversary delivery"
+                class="reminder-card__img"
+                loading="lazy"
+                width="320" height="200"
+              />
+              <div class="reminder-card__overlay">
+                <p class="reminder-card__occasion-name">Wedding Anniversary</p>
+                <p class="reminder-card__occasion-date">
+                  <i data-lucide="calendar" aria-hidden="true"></i>
+                  <time datetime="2025-06-14">14 June, 2025</time>
+                </p>
+              </div>
+            </div>
+
+            <!-- Bouquet info -->
+            <div class="reminder-card__bouquet">
+              <div>
+                <p class="reminder-card__bouquet-name">Classic Red Rose Bouquet</p>
+                <p class="reminder-card__bouquet-detail">24 stems · Premium wrap · Card included</p>
+              </div>
+              <p class="reminder-card__price">₹1,899</p>
+            </div>
+
+            <!-- Countdown -->
+            <div class="reminder-countdown" aria-label="Days until delivery">
+              <div class="countdown-block">
+                <span class="countdown-num" id="h2-days">12</span>
+                <span class="countdown-label">Days</span>
+              </div>
+              <div class="countdown-block">
+                <span class="countdown-num" id="h2-hours">08</span>
+                <span class="countdown-label">Hours</span>
+              </div>
+              <div class="countdown-block">
+                <span class="countdown-num" id="h2-mins">34</span>
+                <span class="countdown-label">Mins</span>
+              </div>
+            </div>
+
+            <a href="../contact/contact.html" class="btn btn-primary btn-block">
+              <i data-lucide="edit-3" aria-hidden="true"></i>
+              Modify Delivery
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll indicator -->
+      <div class="hero2-scroll" aria-hidden="true">
+        <span>Scroll to explore</span>
+        <div class="hero2-scroll-line"></div>
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         TRUST BAND
+         ============================================================ -->
+    <section class="trust-band" aria-label="Trust indicators">
+      <div class="container">
+        <div class="trust-band__inner">
+          <div class="trust-item reveal">
+            <i data-lucide="leaf" aria-hidden="true"></i>
+            <span>Farm-Fresh Flowers</span>
+          </div>
+          <div class="trust-divider" aria-hidden="true"></div>
+          <div class="trust-item reveal delay-100">
+            <i data-lucide="truck" aria-hidden="true"></i>
+            <span>Same-Day Delivery</span>
+          </div>
+          <div class="trust-divider" aria-hidden="true"></div>
+          <div class="trust-item reveal delay-200">
+            <i data-lucide="refresh-cw" aria-hidden="true"></i>
+            <span>Cancel Anytime</span>
+          </div>
+          <div class="trust-divider" aria-hidden="true"></div>
+          <div class="trust-item reveal delay-300">
+            <i data-lucide="shield-check" aria-hidden="true"></i>
+            <span>100% Freshness Guarantee</span>
+          </div>
+          <div class="trust-divider" aria-hidden="true"></div>
+          <div class="trust-item reveal delay-400">
+            <i data-lucide="gift" aria-hidden="true"></i>
+            <span>Exclusive Member Gifts</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         HOW IT WORKS
+         3-step process — visual & animated
+         ============================================================ -->
+    <section class="section section-alt how-it-works" id="how-it-works" aria-labelledby="hiw-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">Simple as Picking Petals</span>
+          <h2 id="hiw-heading">How It Works</h2>
+          <p>Three effortless steps to never miss a special moment again.</p>
+        </div>
+
+        <div class="hiw-grid">
+          <!-- Step 1 -->
+          <div class="hiw-step reveal delay-100">
+            <div class="hiw-step__number" aria-hidden="true">01</div>
+            <!-- <div class="hiw-step__icon" aria-hidden="true">
+              <i data-lucide="calendar-plus"></i>
+            </div> -->
+            <h3 class="hiw-step__title">Save Your Dates</h3>
+            <p class="hiw-step__desc">
+              Add anniversaries, birthdays, and any occasions that matter.
+              Our smart calendar remembers them all — every year.
+            </p>
+            <div class="hiw-step__img-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?w=340&h=220&fit=crop"
+                alt="Calendar showing saved anniversary and birthday dates for flower delivery reminders"
+                loading="lazy"
+                width="340" height="220"
+              />
+            </div>
+          </div>
+
+          <!-- Connector -->
+          <div class="hiw-connector" aria-hidden="true">
+            <i data-lucide="arrow-right"></i>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="hiw-step reveal delay-200">
+            <div class="hiw-step__number" aria-hidden="true">02</div>
+            <!-- <div class="hiw-step__icon" aria-hidden="true">
+              <i data-lucide="flower-2"></i>
+            </div> -->
+            <h3 class="hiw-step__title">Choose Your Bouquet</h3>
+            <p class="hiw-step__desc">
+              Pick from curated collections or let our florists surprise your
+              recipient with a selection tailored to the occasion.
+            </p>
+            <div class="hiw-step__img-wrap">
+              <img
+                src="h2b2.jpg"
+                alt="Florist hand-crafting a luxury rose bouquet with soft pink wrapping paper"
+                loading="lazy"
+                width="340" height="220"
+              />
+            </div>
+          </div>
+
+          <!-- Connector -->
+          <div class="hiw-connector" aria-hidden="true">
+            <i data-lucide="arrow-right"></i>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="hiw-step reveal delay-300">
+            <div class="hiw-step__number" aria-hidden="true">03</div>
+            <!-- <div class="hiw-step__icon" aria-hidden="true">
+              <i data-lucide="smile"></i>
+            </div> -->
+            <h3 class="hiw-step__title">We Deliver the Joy</h3>
+            <p class="hiw-step__desc">
+              Sit back while we handle everything. Fresh flowers arrive right on
+              time — with a personal card from you.
+            </p>
+            <div class="hiw-step__img-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1558636508-e0db3814bd1d?w=340&h=220&fit=crop"
+                alt="Person delightedly receiving fresh flower delivery at their doorstep"
+                loading="lazy"
+                width="340" height="220"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         SUBSCRIPTION PLANS
+         Monthly / Anniversary / Premium Gifting
+         ============================================================ -->
+    <section class="section sub-plans" aria-labelledby="plans-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">Choose Your Plan</span>
+          <h2 id="plans-heading">Subscription Plans</h2>
+          <p>Flexible gifting plans designed around your relationships and rhythm.</p>
+        </div>
+
+        <!-- Toggle: Monthly / Annually -->
+        <div class="billing-toggle reveal" role="group" aria-label="Billing frequency toggle">
+          <button class="billing-btn active" data-billing="monthly" aria-pressed="true">Monthly</button>
+          <button class="billing-btn" data-billing="annually" aria-pressed="false">
+            Annually
+            <span class="badge badge-rose" style="font-size:10px; margin-left:6px;">Save 20%</span>
+          </button>
+        </div>
+
+        <div class="plans-grid">
+
+          <!-- Plan 1: Monthly Blooms -->
+          <div class="plan-card reveal delay-100">
+            <div class="plan-card__top">
+              <div class="plan-card__icon" aria-hidden="true">
+                <i data-lucide="flower"></i>
+              </div>
+              <h3 class="plan-card__name">Monthly Blooms</h3>
+              <p class="plan-card__desc">Perfect for staying connected with fresh florals every month.</p>
+            </div>
+            <div class="plan-card__price-wrap">
+              <span class="plan-card__currency">₹</span>
+              <span class="plan-card__price" data-monthly="999" data-annually="799">999</span>
+              <span class="plan-card__period">/month</span>
+            </div>
+            <ul class="plan-card__features" aria-label="Plan features">
+              <li><i data-lucide="check" aria-hidden="true"></i> 1 bouquet per month</li>
+              <li><i data-lucide="check" aria-hidden="true"></i> Choose flower type</li>
+              <li><i data-lucide="check" aria-hidden="true"></i> Greeting card included</li>
+              <li><i data-lucide="check" aria-hidden="true"></i> Free delivery</li>
+              <li class="plan-card__feature--muted"><i data-lucide="x" aria-hidden="true"></i> Date reminder alerts</li>
+              <li class="plan-card__feature--muted"><i data-lucide="x" aria-hidden="true"></i> Priority florist</li>
+            </ul>
+            <a href="../pricing/pricing.html" class="btn btn-secondary btn-block">Get Started</a>
+          </div>
+
+          <!-- Plan 2: Anniversary Reminder — FEATURED -->
+          <div class="plan-card plan-card--featured reveal delay-200" aria-label="Most popular plan">
+            <div class="plan-card__popular-badge" aria-label="Most popular">
+              <i data-lucide="star" aria-hidden="true"></i> Most Popular
+            </div>
+            <div class="plan-card__top">
+              <div class="plan-card__icon plan-card__icon--featured" aria-hidden="true">
+                <i data-lucide="heart"></i>
+              </div>
+              <h3 class="plan-card__name">Anniversary Reminder</h3>
+              <p class="plan-card__desc">Never forget a date. We send fresh flowers for every occasion you save.</p>
+            </div>
+            <div class="plan-card__price-wrap">
+              <span class="plan-card__currency">₹</span>
+              <span class="plan-card__price" data-monthly="1799" data-annually="1439">1,799</span>
+              <span class="plan-card__period">/month</span>
+            </div>
+            <ul class="plan-card__features" aria-label="Plan features">
+              <li><i data-lucide="check" aria-hidden="true"></i> Up to 4 bouquets/month</li>
+              <li><i data-lucide="check" aria-hidden="true"></i> Save unlimited dates</li>
+              <li><i data-lucide="check" aria-hidden="true"></i> Smart reminder alerts</li>
+              <li><i data-lucide="check" aria-hidden="true"></i> Personalised cards</li>
+              <li><i data-lucide="check" aria-hidden="true"></i> Priority florist</li>
+              <li><i data-lucide="check" aria-hidden="true"></i> 10% subscriber discount</li>
+            </ul>
+            <a href="../pricing/pricing.html" class="btn btn-primary btn-block">
+              <i data-lucide="sparkles" aria-hidden="true"></i>
+              Choose This Plan
+            </a>
+          </div>
+
+          <!-- Plan 3: Premium Gifting -->
+          <div class="plan-card reveal delay-300">
+            <div class="plan-card__top">
+              <div class="plan-card__icon plan-card__icon--gold" aria-hidden="true">
+                <i data-lucide="crown"></i>
+              </div>
+              <h3 class="plan-card__name">Premium Gifting</h3>
+              <p class="plan-card__desc">White-glove gifting experience with luxury bouquets and curated add-ons.</p>
+            </div>
+            <div class="plan-card__price-wrap">
+              <span class="plan-card__currency">₹</span>
+              <span class="plan-card__price" data-monthly="3499" data-annually="2799">3,499</span>
+              <span class="plan-card__period">/month</span>
+            </div>
+            <ul class="plan-card__features" aria-label="Plan features">
+              <li><i data-lucide="check" aria-hidden="true"></i> Unlimited bouquets</li>
+              <li><i data-lucide="check" aria-hidden="true"></i> Luxury packaging</li>
+              <li><i data-lucide="check" aria-hidden="true"></i> Chocolates &amp; candles add-ons</li>
+              <li><i data-lucide="check" aria-hidden="true"></i> Dedicated gifting manager</li>
+              <li><i data-lucide="check" aria-hidden="true"></i> 20% subscriber discount</li>
+              <li><i data-lucide="check" aria-hidden="true"></i> Same-day express delivery</li>
+            </ul>
+            <a href="../pricing/pricing.html" class="btn btn-secondary btn-block">Get Started</a>
+          </div>
+
+        </div>
+
+        <p class="plans-note reveal">
+          <i data-lucide="info" aria-hidden="true"></i>
+          All plans include a free 7-day trial. Cancel anytime, no questions asked.
+        </p>
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         OCCASION BUILDER — Interactive date saver preview
+         ============================================================ -->
+    <section class="section section-alt occasion-builder" aria-labelledby="ob-heading">
+      <div class="container">
+        <div class="ob-grid">
+
+          <!-- Left: Builder UI mockup -->
+          <div class="ob-ui reveal-left">
+            <div class="ob-card">
+              <div class="ob-card__header">
+                <div class="ob-card__header-dot ob-card__header-dot--red" aria-hidden="true"></div>
+                <div class="ob-card__header-dot ob-card__header-dot--yellow" aria-hidden="true"></div>
+                <div class="ob-card__header-dot ob-card__header-dot--green" aria-hidden="true"></div>
+                <span class="ob-card__header-title">My Special Dates</span>
+              </div>
+
+              <!-- Saved occasions list -->
+              <div class="ob-card__body">
+
+                <div class="ob-occasion ob-occasion--active" aria-label="Anniversary upcoming">
+                  <div class="ob-occasion__left">
+                    <span class="ob-occasion__emoji" aria-hidden="true">💍</span>
+                    <div>
+                      <p class="ob-occasion__name">Wedding Anniversary</p>
+                      <p class="ob-occasion__date">June 14 · Every year</p>
+                    </div>
+                  </div>
+                  <span class="badge badge-rose">12 days</span>
+                </div>
+
+                <div class="ob-occasion" aria-label="Mother birthday">
+                  <div class="ob-occasion__left">
+                    <span class="ob-occasion__emoji" aria-hidden="true">🎂</span>
+                    <div>
+                      <p class="ob-occasion__name">Mum's Birthday</p>
+                      <p class="ob-occasion__date">August 3 · Every year</p>
+                    </div>
+                  </div>
+                  <span class="badge badge-green">61 days</span>
+                </div>
+
+                <div class="ob-occasion" aria-label="Best friend birthday">
+                  <div class="ob-occasion__left">
+                    <span class="ob-occasion__emoji" aria-hidden="true">🎉</span>
+                    <div>
+                      <p class="ob-occasion__name">Best Friend's Birthday</p>
+                      <p class="ob-occasion__date">September 22 · Every year</p>
+                    </div>
+                  </div>
+                  <span class="badge badge-plum">111 days</span>
+                </div>
+
+                <!-- Add new occasion -->
+                <button class="ob-add-btn" aria-label="Add new occasion">
+                  <i data-lucide="plus-circle" aria-hidden="true"></i>
+                  Add New Occasion
+                </button>
+              </div>
+
+              <!-- Notification preview -->
+              <div class="ob-notification" role="status" aria-live="polite">
+                <i data-lucide="bell-ring" aria-hidden="true"></i>
+                <div>
+                  <p class="ob-notification__title">Reminder sent!</p>
+                  <p class="ob-notification__body">We'll deliver roses for your anniversary in 3 days.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Copy -->
+          <div class="ob-copy reveal-right">
+            <span class="section-label">Your Gifting Calendar</span>
+            <h2 id="ob-heading">Save Dates.<br />We Handle the Rest.</h2>
+            <p>
+              Our smart occasion manager lives in your dashboard. Add every important date once
+              — anniversaries, birthdays, festivals — and we'll remind you days before
+              and automatically dispatch your chosen bouquet.
+            </p>
+
+            <ul class="ob-features" aria-label="Occasion manager features">
+              <li class="ob-feature">
+                <div class="ob-feature__icon" aria-hidden="true">
+                  <i data-lucide="calendar-check"></i>
+                </div>
+                <div>
+                  <h4 class="ob-feature__title">Smart Yearly Recurrence</h4>
+                  <p>Save once, remind forever. Every occasion repeats automatically each year.</p>
+                </div>
+              </li>
+              <li class="ob-feature">
+                <div class="ob-feature__icon" aria-hidden="true">
+                  <i data-lucide="bell"></i>
+                </div>
+                <div>
+                  <h4 class="ob-feature__title">Multi-Channel Alerts</h4>
+                  <p>Get email, SMS, and app notifications 7 days before each occasion.</p>
+                </div>
+              </li>
+              <li class="ob-feature">
+                <div class="ob-feature__icon" aria-hidden="true">
+                  <i data-lucide="zap"></i>
+                </div>
+                <div>
+                  <h4 class="ob-feature__title">One-Click Confirm</h4>
+                  <p>Review and confirm your order in seconds — or let auto-delivery handle it.</p>
+                </div>
+              </li>
+            </ul>
+
+            <a href="../login/register.html" class="btn btn-primary">
+              <i data-lucide="user-plus" aria-hidden="true"></i>
+              Create Free Account
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         IFESTYLE / EMOTILONAL SECTION
+         Romantic gifting visuals with emotional storytelling
+         ============================================================ -->
+    <section class="section lifestyle-section" aria-labelledby="ls-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">Stories of Love</span>
+          <h2 id="ls-heading">Flowers That Speak<br />When Words Can't</h2>
+        </div>
+
+        <div class="lifestyle-grid">
+
+          <!-- Large feature card -->
+          <article class="lifestyle-card reveal" aria-label="Surprise delivery lifestyle story">
+            <div class="lifestyle-card__img-wrap">
+              <img
+                src="h2d1.jpg"
+                alt="Couple sharing a tender moment as surprise flower bouquet is delivered at their doorstep at sunset"
+                loading="lazy"
+                width="700" height="500"
+              />
+            </div>
+            <div class="lifestyle-card__content">
+              <span class="badge badge-rose">Anniversary</span>
+              <h3>She Didn't Expect It. That's the Point.</h3>
+              <p>Arjun set up a yearly anniversary reminder in minutes. Every June, roses arrive at Priya's door — even when he's travelling.</p>
+              <a href="../blogs/blogs.html" class="link-animated" aria-label="Read Arjun and Priya's story">Read their story →</a>
+            </div>
+          </article>
+
+          <!-- Two small cards -->
+          <div class="lifestyle-smalls">
+
+            <article class="lifestyle-card reveal delay-100" aria-label="Birthday flowers lifestyle story">
+              <div class="lifestyle-card__img-wrap lifestyle-card__img-wrap--sm">
+                <img
+                  src="h2d2.jpg"
+                  alt="Joyful woman receiving vibrant birthday bouquet with a birthday card attached"
+                  loading="lazy"
+                  width="400" height="280"
+                />
+              </div>
+              <div class="lifestyle-card__content">
+                <span class="badge badge-rose">Birthday</span>
+                <h3>Mum's Smile, Every Year</h3>
+                <p>Three years running, Meera hasn't forgotten her mother's birthday — Rose & Stem handles it.</p>
+                <a href="../blogs/blogs.html" class="link-animated" aria-label="Read Meera's story">Read more →</a>
+              </div>
+            </article>
+
+            <article class="lifestyle-card reveal delay-200" aria-label="Apology flowers lifestyle story">
+              <div class="lifestyle-card__img-wrap lifestyle-card__img-wrap--sm">
+                <img
+                  src="h2d3.jpg"
+                  alt="Elegant white lily bouquet with handwritten card resting on a wooden table"
+                  loading="lazy"
+                  width="400" height="280"
+                />
+              </div>
+              <div class="lifestyle-card__content">
+                <span class="badge badge-rose">Just Because</span>
+                <h3>"No Reason Needed"</h3>
+                <p>Sometimes the best surprise is flowers on a random Tuesday. Our subscribers send 3× more "just because" orders.</p>
+                <a href="../blogs/blogs.html" class="link-animated" aria-label="Read just because flower story">Read more →</a>
+              </div>
+            </article>
+
+            <article class="lifestyle-card reveal delay-300" aria-label="Romantic surprise story">
+  <div class="lifestyle-card__img-wrap lifestyle-card__img-wrap--sm">
+    <img
+      src="h2d4.jpg"
+      alt="Romantic candlelight dinner with flowers placed at the center of the table"
+      loading="lazy"
+      width="400" height="280"
+    />
+  </div>
+  <div class="lifestyle-card__content">
+    <span class="badge badge-rose">Romance</span>
+    <h3>A Little Surprise Goes Far</h3>
+    <p>A spontaneous bouquet turned an ordinary evening into something unforgettable.</p>
+    <a href="../blogs/blogs.html" class="link-animated">Read more →</a>
+  </div>
+</article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         BENEFITS — Why Subscribe
+         ============================================================ -->
+    <section class="section section-alt benefits-section" aria-labelledby="ben-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">Why Subscribe?</span>
+          <h2 id="ben-heading">More Than Just Flowers</h2>
+          <p>Subscriber perks that make every delivery feel like a luxury.</p>
+        </div>
+
+        <div class="benefits-grid">
+
+          <div class="benefit-card reveal delay-100">
+            <div class="benefit-card__icon" aria-hidden="true">
+              <i data-lucide="repeat-2"></i>
+            </div>
+            <h3>Never Forget</h3>
+            <p>Smart date saving and automatic yearly recurrence means every occasion is covered — always.</p>
+          </div>
+
+          <div class="benefit-card reveal delay-200">
+            <div class="benefit-card__icon benefit-card__icon--green" aria-hidden="true">
+              <i data-lucide="leaf"></i>
+            </div>
+            <h3>Farm-Fresh Guarantee</h3>
+            <p>Every bouquet is sourced directly from farms and crafted same-day for peak freshness.</p>
+          </div>
+
+          <div class="benefit-card reveal delay-300">
+            <div class="benefit-card__icon benefit-card__icon--gold" aria-hidden="true">
+              <i data-lucide="badge-percent"></i>
+            </div>
+            <h3>Exclusive Discounts</h3>
+            <p>Subscribers save up to 20% on all orders plus early access to seasonal collections.</p>
+          </div>
+
+          <div class="benefit-card reveal delay-100">
+            <div class="benefit-card__icon benefit-card__icon--plum" aria-hidden="true">
+              <i data-lucide="crown"></i>
+            </div>
+            <h3>Priority Delivery</h3>
+            <p>Your orders jump the queue. Guaranteed on-time delivery for every occasion.</p>
+          </div>
+
+          <div class="benefit-card reveal delay-200">
+            <div class="benefit-card__icon" aria-hidden="true">
+              <i data-lucide="message-circle"></i>
+            </div>
+            <h3>Personalised Cards</h3>
+            <p>Add a handwritten card with every bouquet. We print and include it at no extra cost.</p>
+          </div>
+
+          <div class="benefit-card reveal delay-300">
+            <div class="benefit-card__icon benefit-card__icon--green" aria-hidden="true">
+              <i data-lucide="refresh-ccw"></i>
+            </div>
+            <h3>Pause or Cancel</h3>
+            <p>Life happens. Pause your subscription, skip a month, or cancel anytime — zero friction.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         IMPACT STATS
+         ============================================================ -->
+    <section class="section stats-section" aria-labelledby="stats-heading">
+      <div class="container">
+        <div class="stats-section__inner">
+          <div class="stats-section__copy reveal-left">
+            <span class="section-label">Our Impact</span>
+            <h2 id="stats-heading">Moments Delivered<br />Across India</h2>
+            <p>
+              From Mumbai to Mysore, our subscribers trust us with their most precious relationships.
+              Here's what we've delivered together.
+            </p>
+
+            <a href="../about/about.html"
+   class="btn btn-secondary"
+   style="color:#FFFFFF !important; border-color:#FFFFFF !important;">
+  <i data-lucide="phone" style="color:#FFFFFF !important;" aria-hidden="true"></i>
+  Our Story
+</a>
+          </div>
+
+          <div class="stats-grid reveal-right">
+            <div class="stat-item">
+              <p class="stat-item__num">
+                <span class="counter" data-target="84000" data-suffix="+">0</span>
+              </p>
+              <p class="stat-item__label">Bouquets Delivered</p>
+            </div>
+            <div class="stat-item">
+              <p class="stat-item__num">
+                <span class="counter" data-target="12400" data-suffix="+">0</span>
+              </p>
+              <p class="stat-item__label">Active Subscribers</p>
+            </div>
+            <div class="stat-item">
+              <p class="stat-item__num">
+                <span class="counter" data-target="52" data-suffix="+">0</span>
+              </p>
+              <p class="stat-item__label">Cities Served</p>
+            </div>
+            <div class="stat-item">
+              <p class="stat-item__num">
+                <span class="counter" data-target="98" data-suffix="%">0</span>
+              </p>
+              <p class="stat-item__label">On-Time Delivery</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         TESTIMONIALS
+         ============================================================ -->
+    <section class="section section-alt testimonials-section" aria-labelledby="test-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">What Subscribers Say</span>
+          <h2 id="test-heading">Real Love, Real Stories</h2>
+        </div>
+
+        <div class="testimonial-slider reveal" data-autoplay="5000" aria-label="Customer testimonials slider">
+          <div class="slider-track">
+
+            <!-- Testimonial 1 -->
+            <div class="slide">
+              <div class="testimonials-row">
+                <div class="testimonial-card">
+                  <div class="testimonial-stars" aria-label="5 stars">
+                    <i data-lucide="star" aria-hidden="true"></i>
+                    <i data-lucide="star" aria-hidden="true"></i>
+                    <i data-lucide="star" aria-hidden="true"></i>
+                    <i data-lucide="star" aria-hidden="true"></i>
+                    <i data-lucide="star" aria-hidden="true"></i>
+                  </div>
+                  <p class="testimonial-text">"I've never forgotten my wife's birthday since I signed up. The flowers arrived before I even woke up. She cried happy tears."</p>
+                  <div class="testimonial-author">
+                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=48&h=48&fit=crop&crop=face" alt="Subscriber Rohit Sharma" class="testimonial-avatar" loading="lazy" width="48" height="48" />
+                    <div>
+                      <p class="testimonial-name">Rohit Sharma</p>
+                      <p class="testimonial-role">Anniversary Reminder Plan · Mumbai</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="testimonial-card">
+                  <div class="testimonial-stars" aria-label="5 stars">
+                    <i data-lucide="star" aria-hidden="true"></i>
+                    <i data-lucide="star" aria-hidden="true"></i>
+                    <i data-lucide="star" aria-hidden="true"></i>
+                    <i data-lucide="star" aria-hidden="true"></i>
+                    <i data-lucide="star" aria-hidden="true"></i>
+                  </div>
+                  <p class="testimonial-text">"I manage 8 important dates through Rose & Stem. The reminder system is flawless — I've never looked more thoughtful in my relationships."</p>
+                  <div class="testimonial-author">
+                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=48&h=48&fit=crop&crop=face" alt="Subscriber Ananya Iyer" class="testimonial-avatar" loading="lazy" width="48" height="48" />
+                    <div>
+                      <p class="testimonial-name">Ananya Iyer</p>
+                      <p class="testimonial-role">Premium Gifting Plan · Bangalore</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="testimonial-card">
+                  <div class="testimonial-stars" aria-label="5 stars">
+                    <i data-lucide="star" aria-hidden="true"></i>
+                    <i data-lucide="star" aria-hidden="true"></i>
+                    <i data-lucide="star" aria-hidden="true"></i>
+                    <i data-lucide="star" aria-hidden="true"></i>
+                    <i data-lucide="star" aria-hidden="true"></i>
+                  </div>
+                  <p class="testimonial-text">"The quality of blooms is genuinely premium. And the personalised card made my mum feel so special. Worth every rupee."</p>
+                  <div class="testimonial-author">
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=48&h=48&fit=crop&crop=face" alt="Subscriber Meera Nair" class="testimonial-avatar" loading="lazy" width="48" height="48" />
+                    <div>
+                      <p class="testimonial-name">Meera Nair</p>
+                      <p class="testimonial-role">Monthly Blooms Plan · Kochi</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="slide">
+              <div class="testimonials-row">
+                <div class="testimonial-card">
+                  <div class="testimonial-stars" aria-label="5 stars">
+                    <i data-lucide="star" aria-hidden="true"></i>
+                    <i data-lucide="star" aria-hidden="true"></i>
+                    <i data-lucide="star" aria-hidden="true"></i>
+                    <i data-lucide="star" aria-hidden="true"></i>
+                    <i data-lucide="star" aria-hidden="true"></i>
+                  </div>
+                  <p class="testimonial-text">"Signed up for the anniversary plan on a whim. Best decision I made for my relationship. My partner thinks I'm the most thoughtful person alive."</p>
+                  <div class="testimonial-author">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=48&h=48&fit=crop&crop=face" alt="Subscriber Karan Mehta" class="testimonial-avatar" loading="lazy" width="48" height="48" />
+                    <div>
+                      <p class="testimonial-name">Karan Mehta</p>
+                      <p class="testimonial-role">Anniversary Reminder Plan · Delhi</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="testimonial-card">
+                  <div class="testimonial-stars" aria-label="5 stars">
+                    <i data-lucide="star" aria-hidden="true"></i>
+                    <i data-lucide="star" aria-hidden="true"></i>
+                    <i data-lucide="star" aria-hidden="true"></i>
+                    <i data-lucide="star" aria-hidden="true"></i>
+                    <i data-lucide="star" aria-hidden="true"></i>
+                  </div>
+                  <p class="testimonial-text">"Every bouquet is a work of art. The packaging alone makes the recipient feel special before they even see the flowers. Incredible quality."</p>
+                  <div class="testimonial-author">
+                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=48&h=48&fit=crop&crop=face" alt="Subscriber Deepa Krishnan" class="testimonial-avatar" loading="lazy" width="48" height="48" />
+                    <div>
+                      <p class="testimonial-name">Deepa Krishnan</p>
+                      <p class="testimonial-role">Premium Gifting Plan · Chennai</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="testimonial-card">
+                  <div class="testimonial-stars" aria-label="5 stars">
+                    <i data-lucide="star" aria-hidden="true"></i>
+                    <i data-lucide="star" aria-hidden="true"></i>
+                    <i data-lucide="star" aria-hidden="true"></i>
+                    <i data-lucide="star" aria-hidden="true"></i>
+                    <i data-lucide="star" aria-hidden="true"></i>
+                  </div>
+                  <p class="testimonial-text">"The app reminder is a lifesaver. I got a notification 7 days before my parents' anniversary and confirmed delivery in two taps. Brilliant."</p>
+                  <div class="testimonial-author">
+                    <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=48&h=48&fit=crop&crop=face" alt="Subscriber Sahil Gupta" class="testimonial-avatar" loading="lazy" width="48" height="48" />
+                    <div>
+                      <p class="testimonial-name">Sahil Gupta</p>
+                      <p class="testimonial-role">Monthly Blooms Plan · Pune</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Slider controls -->
+          <button class="slider-prev" aria-label="Previous testimonials">
+            <i data-lucide="chevron-left" aria-hidden="true"></i>
+          </button>
+          <button class="slider-next" aria-label="Next testimonials">
+            <i data-lucide="chevron-right" aria-hidden="true"></i>
+          </button>
+          <div class="slider-dots" aria-label="Slide indicators"></div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         ADD-ONS / GIFTING EXTRAS
+         ============================================================ -->
+    <section class="section addons-section" aria-labelledby="addons-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">Make It Memorable</span>
+          <h2 id="addons-heading">Add a Little Extra Magic</h2>
+          <p>Pair your bouquet with thoughtful gifts to make every delivery unforgettable.</p>
+        </div>
+
+        <div class="addons-grid">
+
+          <div class="addon-card reveal delay-100">
+            <div class="addon-card__img-wrap">
+              <img
+                src="h2e1.jpg"
+                alt="Luxury Belgian chocolate box paired with a rose bouquet for a premium gift"
+                loading="lazy"
+                width="280" height="200"
+              />
+            </div>
+            <div class="addon-card__body">
+              <!-- <span class="addon-card__emoji" aria-hidden="true">🍫</span> -->
+              <h3 class="addon-card__title">Artisan Chocolates</h3>
+              <p class="addon-card__desc">Handcrafted Belgian chocolate box to accompany your bouquet.</p>
+              <p class="addon-card__price">+ ₹349</p>
+            </div>
+          </div>
+
+          <div class="addon-card reveal delay-200">
+            <div class="addon-card__img-wrap">
+              <img
+                src="h2e2.jpg"
+                alt="Handwritten greeting card with a rose petal design placed beside a flower bouquet"
+                loading="lazy"
+                width="280" height="200"
+              />
+            </div>
+            <div class="addon-card__body">
+              <!-- <span class="addon-card__emoji" aria-hidden="true">✉️</span> -->
+              <h3 class="addon-card__title">Handwritten Card</h3>
+              <p class="addon-card__desc">A personal message, beautifully hand-penned by our team.</p>
+              <p class="addon-card__price">+ ₹99</p>
+            </div>
+          </div>
+
+          <div class="addon-card reveal delay-300">
+            <div class="addon-card__img-wrap">
+              <img
+                src="h2e3.jpg"
+                alt="Premium scented candle with rose fragrance perfect for a romantic gift"
+                loading="lazy"
+                width="280" height="200"
+              />
+            </div>
+            <div class="addon-card__body">
+              <!-- <span class="addon-card__emoji" aria-hidden="true">🕯</span> -->
+              <h3 class="addon-card__title">Scented Candle</h3>
+              <p class="addon-card__desc">Rose &amp; jasmine infused premium soy candle in a keepsake jar.</p>
+              <p class="addon-card__price">+ ₹449</p>
+            </div>
+          </div>
+
+          <div class="addon-card reveal delay-400">
+            <div class="addon-card__img-wrap">
+              <img
+                src="h2e4.jpg"
+                alt="Plush soft teddy bear with a red bow perfect for a birthday or anniversary gift"
+                loading="lazy"
+                width="280" height="200"
+              />
+            </div>
+            <div class="addon-card__body">
+              <!-- <span class="addon-card__emoji" aria-hidden="true">🧸</span> -->
+              <h3 class="addon-card__title">Plush Teddy Bear</h3>
+              <p class="addon-card__desc">A soft, cuddly companion for any occasion.</p>
+              <p class="addon-card__price">+ ₹599</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         BLOG PREVIEW
+         ============================================================ -->
+    <section class="section section-alt blog-preview" aria-labelledby="blog-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">From Our Garden Blog</span>
+          <h2 id="blog-heading">Gifting Guides &amp; Inspiration</h2>
+        </div>
+
+        <div class="blog-preview-grid">
+
+          <article class="blog-card reveal delay-100">
+            <div class="card-image">
+              <img
+                src="../blogs/bouquets-5.jpg"
+                alt="Romantic flower arrangement guide showing how to choose the perfect anniversary bouquet"
+                loading="lazy"
+                width="420" height="260"
+              />
+            </div>
+            <div class="card-body">
+              <p class="blog-category">Romantic Guides</p>
+              <h3 class="blog-title">
+                <a href="../blog-details/blog-details-1.html">How to Choose an Anniversary Bouquet</a>
+              </h3>
+              <p class="blog-excerpt">From classic red roses to exotic orchids — a complete guide to matching flowers with the milestone.</p>
+              <div class="blog-meta">
+                <span><i data-lucide="calendar" aria-hidden="true"></i> 3 May 2025</span>
+                <span><i data-lucide="clock" aria-hidden="true"></i> 5 min read</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="blog-card reveal delay-200">
+            <div class="card-image">
+              <img
+                src="../blogs/bouquets-6.webp"
+                alt="Flower care tips showing how to keep fresh cut roses alive longer in a vase at home"
+                loading="lazy"
+                width="420" height="260"
+              />
+            </div>
+            <div class="card-body">
+              <p class="blog-category">Flower Care Tips</p>
+              <h3 class="blog-title">
+                <a href="../blog-details/blog-details-2.html">10 Secrets to Keep Your Roses Fresh Longer</a>
+              </h3>
+              <p class="blog-excerpt">Expert florist tips to extend the life of your blooms so they stay beautiful and lively for days.</p>
+              <div class="blog-meta">
+                <span><i data-lucide="calendar" aria-hidden="true"></i> 18 Apr 2025</span>
+                <span><i data-lucide="clock" aria-hidden="true"></i> 4 min read</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="blog-card reveal delay-300">
+            <div class="card-image">
+              <img
+                src="../blogs/bouquets-8.webp"
+                alt="Seasonal flower trends showing the most popular spring bouquet styles for gifting in 2025"
+                loading="lazy"
+                width="420" height="260"
+              />
+            </div>
+            <div class="card-body">
+              <p class="blog-category">Seasonal Trends</p>
+              <h3 class="blog-title">
+                <a href="../blog-details/blog-details-4.html">Top 7 Seasonal Bouquet Trends for 2026</a>
+              </h3>
+              <p class="blog-excerpt">From dried botanicals to tropical mixes — the florals your recipients will absolutely love this season.</p>
+              <div class="blog-meta">
+                <span><i data-lucide="calendar" aria-hidden="true"></i> 2 Apr 2026</span>
+                <span><i data-lucide="clock" aria-hidden="true"></i> 6 min read</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="text-center mt-6 reveal">
+          <a href="../blogs/blogs.html" class="btn btn-secondary">
+            <i data-lucide="book-open" aria-hidden="true"></i>
+            View All Articles
+          </a>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         CTA BANNER — Final conversion push
+         ============================================================ -->
+    <section class="cta-banner" aria-label="Call to action — Start subscription">
+      <!-- Decorative petals -->
+      <div class="cta-banner__petal cta-banner__petal--1" aria-hidden="true">🌹</div>
+      <div class="cta-banner__petal cta-banner__petal--2" aria-hidden="true">🌸</div>
+      <div class="cta-banner__petal cta-banner__petal--3" aria-hidden="true">💐</div>
+
+      <div class="container cta-banner__inner">
+        <div class="cta-banner__copy reveal">
+          <span class="font-accent cta-banner__script" aria-hidden="true">Start Today</span>
+          <h2>Make Someone's Day<br /><em>Every</em> Day 🌹</h2>
+          <p>
+            Join 12,400+ subscribers who never miss a moment. Set up your first reminder
+            in under 2 minutes — completely free for 7 days.
+          </p>
+        </div>
+        <div class="cta-banner__actions reveal delay-200">
+          <a href="../pricing/pricing.html" class="btn btn-white btn-lg">
+            <i data-lucide="sparkles" aria-hidden="true"></i>
+            Start Free Trial
+          </a>
+<a href="../contact/contact.html"
+   class="btn btn-secondary"
+   style="color:#FFFFFF !important; border-color:#FFFFFF !important;">
+  <i data-lucide="phone" style="color:#FFFFFF !important;" aria-hidden="true"></i>
+  Talk to Us
+</a>
+        </div>
+        <!-- Reassurance micro-copy -->
+        <p class="cta-banner__reassurance reveal delay-300">
+          <i data-lucide="shield-check" aria-hidden="true"></i>
+          No credit card required · Cancel anytime · Free 7-day trial
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER PLACEHOLDER — loaded dynamically via global.js
+       ============================================================ -->
+  <footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+
+      <!-- ── Section 1: Brand ── -->
+      <div class="footer-brand">
+<a href="../home-1/home.html" class="navbar-logo">
+
+  <img src="../global-images/logo-pink.svg"
+       class="logo-light"
+       alt="Rose & Stem">
+
+  <img src="../global-images/logo-white.svg"
+       class="logo-dark"
+       alt="Rose & Stem">
+
+</a>
+        <p class="footer-description">
+          Handcrafted floral arrangements delivered fresh for every special moment.
+          Spreading emotions, one bouquet at a time since 2018.
+        </p>
+
+        <!-- Contact info -->
+        <div class="footer-contact-info">
+          <div class="footer-contact-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 5.55 5.55l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <span>+91 (987) 654-3210</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            <span>hr@roseandstm.com</span>
+          </div>
+        </div>
+
+        <!-- Social links -->
+        <div class="footer-socials" role="list" aria-label="Social media links">
+          <a href="#" class="footer-social-link" role="listitem" aria-label="Follow us on Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+          </a>
+          <a href="#" class="footer-social-link" role="listitem" aria-label="Follow us on Facebook">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="#" class="footer-social-link" role="listitem" aria-label="Follow us on Pinterest">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.24 2.65 7.87 6.39 9.29-.09-.78-.17-1.98.03-2.83.19-.77 1.28-5.42 1.28-5.42s-.33-.65-.33-1.62c0-1.52.88-2.66 1.98-2.66.93 0 1.38.7 1.38 1.54 0 .94-.6 2.35-.91 3.65-.26 1.09.54 1.97 1.61 1.97 1.93 0 3.42-2.03 3.42-4.97 0-2.6-1.87-4.42-4.54-4.42-3.09 0-4.91 2.32-4.91 4.72 0 .93.36 1.94.81 2.49a.33.33 0 0 1 .08.31c-.08.34-.27 1.09-.31 1.24-.05.2-.16.24-.38.14-1.39-.65-2.26-2.68-2.26-4.31 0-3.51 2.55-6.74 7.35-6.74 3.86 0 6.86 2.75 6.86 6.42 0 3.83-2.41 6.91-5.76 6.91-1.13 0-2.19-.59-2.55-1.28l-.69 2.59c-.25.97-.93 2.18-1.39 2.92.75.23 1.54.35 2.36.35 5.52 0 10-4.48 10-10S17.52 2 12 2z"/></svg>
+          </a>
+          <a href="#" class="footer-social-link" role="listitem" aria-label="Follow us on Twitter / X">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
+          </a>
+        </div>
+
+        <!-- Newsletter -->
+        <div class="footer-newsletter">
+          <p>Subscribe for exclusive offers &amp; flower tips:</p>
+          <form class="newsletter-form" id="newsletter-form" novalidate aria-label="Newsletter subscription">
+            <input type="email" class="newsletter-input" placeholder="Your email address" aria-label="Email address for newsletter" required />
+            <button type="submit" class="btn btn-primary btn-sm" aria-label="Subscribe to newsletter">
+              Subscribe
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- ── Section 2: Quick Links ── -->
+      <div class="footer-col">
+        <h3 class="footer-col-title">Quick Links</h3>
+        <nav class="footer-links" aria-label="Quick navigation links">
+          <a href="../home-1/home.html"             class="footer-link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+            Home
+          </a>
+          <a href="../about/about.html"              class="footer-link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+            About Us
+          </a>
+          <a href="../services/services.html"        class="footer-link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+            Services
+          </a>
+          <a href="../pricing/pricing.html"          class="footer-link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+            Pricing
+          </a>
+          <a href="../blogs/blogs.html"              class="footer-link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+            Blog
+          </a>
+          <a href="../contact/contact.html"          class="footer-link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+            Contact Us
+          </a>
+          <a href="../admin-dashboard/dashboard.html" class="footer-link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+            Dashboard
+          </a>
+        </nav>
+      </div>
+
+      <!-- ── Section 3: Service Details ── -->
+      <div class="footer-col">
+        <h3 class="footer-col-title">Our Services</h3>
+        <nav class="footer-links" aria-label="Service detail links">
+          <a href="../service-details/service-details-1.html" class="footer-link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+            Rose Bouquets
+          </a>
+          <a href="../service-details/service-details-2.html" class="footer-link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+            Wedding Florals
+          </a>
+          <a href="../service-details/service-details-3.html" class="footer-link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+            Same-Day Delivery
+          </a>
+          <a href="../service-details/service-details-4.html" class="footer-link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+            Subscription Plans
+          </a>
+          <a href="../service-details/service-details-5.html" class="footer-link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+            Corporate Gifting
+          </a>
+          <a href="../service-details/service-details-6.html" class="footer-link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+            Custom Arrangements
+          </a>
+        </nav>
+      </div>
+
+      <!-- ── Section 4: Help & Support ── -->
+      <div class="footer-col">
+        <h3 class="footer-col-title">Help &amp; Support</h3>
+        <nav class="footer-links" aria-label="Help and support links">
+          <a href="../contact/contact.html"  class="footer-link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+            FAQs
+          </a>
+          <a href="../contact/contact.html"  class="footer-link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+            Delivery Policy
+          </a>
+          <a href="../contact/contact.html"  class="footer-link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+            Returns &amp; Refunds
+          </a>
+          <a href="../contact/contact.html"  class="footer-link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+            Track My Order
+          </a>
+          <a href="../admin-dashboard/dashboard.html" class="footer-link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+            My Dashboard
+          </a>
+        </nav>
+      </div>
+
+    </div><!-- /.footer-grid -->
+  </div><!-- /.container -->
+
+  <!-- ── Footer Bottom Bar ── -->
+  <div class="footer-bottom">
+    <div class="container">
+      <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;">
+        <p>&copy; <span id="footer-year">2026</span> Rose &amp; Stem. All rights reserved. Crafted with 🌹 in India.</p>
+        <nav class="footer-bottom-links" aria-label="Legal links">
+          <a href="#" class="footer-bottom-link">Privacy Policy</a>
+          <a href="#" class="footer-bottom-link">Terms of Service</a>
+          <a href="#" class="footer-bottom-link">Cookie Policy</a>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+</footer>
+
+  <!-- Toast container -->
+  <div id="toast-container" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- Global JS -->
+  
+  <script src="../global-js/global.js"></script>
+
+  <!-- Page JS -->
+  <script src="home.js"></script>
+</body>
+</html>
